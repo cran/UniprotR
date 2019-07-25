@@ -16,14 +16,15 @@ DataFrame where rows names are the accession
      and columns contains the information of protein function roles from the UniProt
 }
 \description{
-The function is work to retrieve Protein Function data from UniProt for a list of proteins accessions.
-For more information about what included in the Protein Function data see https://www.uniprot.org/help/uniprotkb_column_names.
+The function is work to retrieve Protein Function data from UniProt for 
+a list of proteins accessions.For more information about what included in the
+Protein Function data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-GetProteinFunction("O14520")
+Obj <- GetProteinFunction("O14520")
 
 }
 \author{

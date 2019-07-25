@@ -1,7 +1,8 @@
 #' Connect and parse UniProt Miscellaneous information.
 #'
-#' The function is work to retrieve Miscellaneous data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Miscellaneous data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' The function is work to retrieve Miscellaneous data from UniProt for a list
+#' of proteins accessions.For more information about what included in the
+#' Miscellaneous data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetMiscellaneous(ProteinAccList , directorypath = NULL)
 #'
@@ -14,7 +15,7 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @examples GetMiscellaneous("O14520")
+#' @examples Obj <- GetMiscellaneous("O14520")
 #'
 #' @export
 #'

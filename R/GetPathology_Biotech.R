@@ -1,7 +1,8 @@
 #' Connect and parse UniProt Pathology_Biotech information.
 #'
-#' The function is work to retrieve Pathology_Biotech data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Pathology_Biotech data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' The function is work to retrieve Pathology_Biotech data from UniProt for 
+#' a list of proteins accessions.For more information about what included in the
+#' Pathology_Biotech data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetPathology_Biotech(ProteinAccList , directorypath = NULL)
 #'
@@ -14,7 +15,7 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @examples GetPathology_Biotech("O14520")
+#' @examples Obj <- GetPathology_Biotech("O14520")
 #'
 #' @export
 #'

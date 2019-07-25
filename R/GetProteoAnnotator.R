@@ -1,6 +1,8 @@
 #' Connect and parse UniProt information.
 #'
-#' The function is work to retrieve user-defined information data from UniProt for a list of proteins accessions.
+#' The function is work to retrieve user-defined information data from UniProt
+#' for a list of proteins accessions For more
+#' information see https://www.uniprot.org/help/uniprotkb_column_names
 #'
 #' @usage GetProteinAnnontate(ProteinAccList , columns)
 #'
@@ -12,9 +14,8 @@
 #' @return DataFrame where rows names are the accession
 #'      and columns contains the information retrieved from the UniProt
 #'
-#' @seealso For more information about the https://www.uniprot.org/help/uniprotkb_column_names
 #'
-#' @examples GetProteinInteractions("O14520")
+#' @examples Obj <- GetProteinInteractions("O14520")
 #'
 #' @author Mohmed Soudy and Ali Mostafa
 #'

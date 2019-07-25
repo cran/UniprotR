@@ -1,7 +1,8 @@
 #' Connect and parse UniProt protein Subcellular location information.
 #'
 #' The function is work to retrieve protein Subcellular location data from UniProt for a list of proteins accessions.
-#' For more information about what included in the protein Subcellular location data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' For more information about what included in the protein Subcellular location 
+#' data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetSubcellular_location(ProteinAccList, directorypath = NULL)
 #'

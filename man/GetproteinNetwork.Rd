@@ -12,7 +12,8 @@ GetproteinNetwork(ProteinAccList , directorypath = NULL)
 \item{directorypath}{path to save excel file containig results returened by the function.}
 }
 \description{
-This function is connecting to stringdb and retrieve all possible interactions for the searched protein/s.
+This function is connecting to stringdb and retrieve all possible interactions
+for the searched protein/s.
 }
 \author{
 Mohmed Soudy and Ali Mostafa

@@ -1,6 +1,7 @@
 #' Connect and parse stringdb information.
 #'
-#' This function is connecting to stringdb and retrieve all possible interactions for the searched protein/s.
+#' This function is connecting to stringdb and retrieve all possible interactions
+#' for the searched protein/s.
 #'
 #' @usage GetproteinNetwork(ProteinAccList , directorypath = NULL)
 #'
@@ -26,7 +27,9 @@ GetproteinNetwork <- function(ProteinAccList , directorypath = NULL)
       Network <- image_read(ProteinString)
       plot(Network)
     }else{
+      dev.off()
       HandleBadRequests(Request$status_code)
+      pdf(paste0(directorypath , "/","Protin Network.pdf"))
     }
   }
   ProteinList <- paste0(baseUrl,ProteinAccList , collapse = "%0d" , "&add_color_nodes=20&network_flavor=actions&block_structure_pics_in_bubbles=1")

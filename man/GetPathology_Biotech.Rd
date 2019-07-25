@@ -16,14 +16,15 @@ DataFrame where rows names are the accession
      and columns contains the information retrieved from the UniProt
 }
 \description{
-The function is work to retrieve Pathology_Biotech data from UniProt for a list of proteins accessions.
-For more information about what included in the Pathology_Biotech data see https://www.uniprot.org/help/uniprotkb_column_names.
+The function is work to retrieve Pathology_Biotech data from UniProt for 
+a list of proteins accessions.For more information about what included in the
+Pathology_Biotech data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-GetPathology_Biotech("O14520")
+Obj <- GetPathology_Biotech("O14520")
 
 }
 \author{

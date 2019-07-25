@@ -17,13 +17,14 @@ DataFrame where rows names are the accession
 }
 \description{
 The function is work to retrieve Publication data from UniProt for a list of proteins accessions.
-For more information about what included in the Publication data see https://www.uniprot.org/help/uniprotkb_column_names.
+For more information about what included in the Publication 
+data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-GetPublication("O14520")
+Obj <- GetPublication("O14520")
 
 }
 \author{

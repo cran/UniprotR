@@ -16,14 +16,15 @@ DataFrame where rows names are the accession
      and columns contains the General Information of protein from the UniProt
 }
 \description{
-The function is work to retrieve General Information data from UniProt for a list of proteins accessions.
-For more information about what included in the General Information data see https://www.uniprot.org/help/uniprotkb_column_names.
+The function is work to retrieve General Information data from UniProt
+for a list of proteins accessions.For more information about what included in the 
+General Information data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-GetGeneral_Information("O14520")
+Obj <- GetGeneral_Information("O14520")
 
 }
 \author{

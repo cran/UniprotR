@@ -1,7 +1,8 @@
 #' Connect and parse UniProt protein taxonomic information.
 #'
 #' The function is work to retrieve Miscellaneous data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Miscellaneous data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' For more information about what included in the Miscellaneous 
+#' data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetTaxaidentifier(ProteinAccList, directorypath = NULL)
 #'
@@ -14,9 +15,11 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @examples GetTaxaidentifier("O14520")
+#' @examples Obj <- GetTaxaidentifier("O14520")
 #'
 #' @export
+#' 
+#' @author Mohmed Soudy and Ali Mostafa
 
 GetTaxaidentifier <- function(ProteinAccList, directorypath = NULL)
 {

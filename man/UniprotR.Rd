@@ -41,8 +41,6 @@ GetPublication
 
 GetSequences_uniprot
 
-GetStructureInfo
-
 GetSubcellular_location
 
 GetTaxaidentifier

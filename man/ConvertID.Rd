@@ -4,7 +4,8 @@
 \alias{ConvertID}
 \title{Connect and parse UniProt database identifiers information.}
 \usage{
-ConvertID(ProteinAccList , ID_from = "ACC+ID" , ID_to = NULL , directorypath = NULL)
+ConvertID(ProteinAccList , ID_from = "ACC+ID" , ID_to = NULL
+ , directorypath = NULL)
 }
 \arguments{
 \item{ProteinAccList}{Vector of UniProt Accession/s}
@@ -21,14 +22,16 @@ DataFrame where column one contains the Accession/ID before conversion
      and other columns contains the Accession/ID after conversion
 }
 \description{
-The function is work to convert the UniProtKB AC/ID to any database identifiers available by the UniProtKB.
-For more information about available database identifiers see https://www.uniprot.org/help/api_idmapping.
+The function is work to convert the UniProtKB AC/ID to any database identifiers
+available by the UniProtKB.
+For more information about available database identifiers
+see https://www.uniprot.org/help/api_idmapping.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-ConvertID("O14520" , "ACC+ID" , "EMBL")
+Obj <- ConvertID("O14520" , "ACC+ID" , "EMBL")
 
 }
 \seealso{

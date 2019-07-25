@@ -1,7 +1,8 @@
 #' Connect and parse UniProt proteins gene ontology information.
 #'
-#' The function is work to retrieve proteins gene ontology  data from UniProt for a list of proteins accessions.
-#' For more information about what included in the proteins gene ontology  data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' The function is work to retrieve proteins gene ontology  data from UniProt
+#' for a list of proteins accessions.For more information about what included in the
+#' proteins gene ontology data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetProteinGOInfo(ProteinAccList , directorypath = NULL)
 #'
@@ -12,7 +13,7 @@
 #' @return DataFrame where rows names are the accession
 #'      and columns contains the information of Gene ontology of protein from the UniProt
 #'
-#' @examples GetProteinGOInfo("O14520")
+#' @examples Obj <- GetProteinGOInfo("O14520")
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'

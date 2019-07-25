@@ -17,13 +17,14 @@ DataFrame where rows names are the accession
 }
 \description{
 The function is work to retrieve PTM_Processsing data from UniProt for a list of proteins accessions.
-For more information about what included in the PTM_Processsing data see https://www.uniprot.org/help/uniprotkb_column_names.
+For more information about what included in the PTM_Processsing data
+see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-GetPTM_Processsing("O14520" )
+Obj <- GetPTM_Processsing("O14520" )
 
 }
 \author{

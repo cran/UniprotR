@@ -16,14 +16,15 @@ DataFrame where rows names are the accession
      and columns contains the information retrieved from the UniProt
 }
 \description{
-The function is work to retrieve Expression data from UniProt for a list of proteins accessions.
-For more information about what included in the Expression data see https://www.uniprot.org/help/uniprotkb_column_names.
+The function is work to retrieve Expression data from UniProt for a
+list of proteins accessions.For more information about what included
+in the Expression data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-GetExpression("O14520")
+Obj <- GetExpression("O14520")
 
 }
 \author{

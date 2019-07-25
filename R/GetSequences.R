@@ -1,7 +1,8 @@
 #' Connect and parse UniProt Sequences information.
 #'
 #' The function is work to retrieve Sequences data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Sequences data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' For more information about what included in the Sequences data
+#' see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetSequences(ProteinAccList, directorypath = NULL)
 #'
@@ -12,7 +13,7 @@
 #' @return DataFrame where rows names are the accession
 #'      and columns contains the information retrieved from the UniProt
 #'
-#' @examples GetSequences("O14520")
+#' @examples Obj <- GetSequences("O14520")
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'

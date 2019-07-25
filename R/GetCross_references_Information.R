@@ -1,7 +1,9 @@
 #' Connect and parse UniProt Cross-references information.
 #'
-#' The function is work to retrieve Cross-references data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Cross-references data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' The function is work to retrieve Cross-references data from UniProt for a 
+#' list of proteins accessions.
+#' For more information about what included in the Cross-references 
+#' data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetCross_references_Information(ProteinAccList , directorypath = NULL)
 #'
@@ -15,7 +17,7 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @examples GetCross_references_Information("O14520")
+#' @examples Obj <- GetCross_references_Information("O14520")
 #'
 #' @export
 #'

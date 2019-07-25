@@ -1,7 +1,8 @@
 #' Connect and parse UniProt Protein Function information.
 #'
-#'The function is work to retrieve Protein Function data from UniProt for a list of proteins accessions.
-#'For more information about what included in the Protein Function data see https://www.uniprot.org/help/uniprotkb_column_names.
+#'The function is work to retrieve Protein Function data from UniProt for 
+#'a list of proteins accessions.For more information about what included in the
+#'Protein Function data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetProteinFunction(ProteinAccList , directorypath = NULL)
 #'
@@ -14,7 +15,7 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @examples GetProteinFunction("O14520")
+#' @examples Obj <- GetProteinFunction("O14520")
 #'
 #' @export
 #'

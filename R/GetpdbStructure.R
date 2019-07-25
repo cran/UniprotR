@@ -1,6 +1,7 @@
 #' Connect and parse UniProt information.
 #'
-#' The function is work to retrieving GetpdbStructure and download it to user directory.
+#' The function is work to retrieving GetpdbStructure and download it
+#' to user directory.
 #'
 #' @param ProteinAccList input a vector of UniProt Accession/s
 #'

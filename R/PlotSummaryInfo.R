@@ -21,8 +21,8 @@ PlotSummaryInfo <- function(ProteinDataObject,directorypath = NULL)
     geom_bar(fill = "#0073C2FF", stat = "identity") + xlab("Chromosomes") + ylab("frequency") +
     geom_text(aes(label = ChromoCount$freq), vjust = -0.3) + theme(axis.text.x = element_text(angle = 90 , hjust = 1 , vjust = 0.5))+
     theme_bw()
-
-
+  
+  plot(ChromoSummary)
  if(!is.null(directorypath))
  {
  write.csv(ChromoCount , paste0(directorypath , "/" , "Chromosomes Info Summary.csv"))

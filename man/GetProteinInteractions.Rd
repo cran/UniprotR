@@ -16,14 +16,15 @@ DataFrame where rows names are the accession
      and columns contains the information of protein Interactions from the UniProt
 }
 \description{
-The function is work to retrieve protein Interactions data from UniProt for a list of proteins accessions.
-For more information about what included in the protein Interactions data see https://www.uniprot.org/help/uniprotkb_column_names.
+The function is work to retrieve protein Interactions data from UniProt for a
+list of proteins accessions.For more information about what included in the 
+protein Interactions data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-GetProteinInteractions("ProteinAccession")
+Obj <- GetProteinInteractions("ProteinAccession")
 
 }
 \author{

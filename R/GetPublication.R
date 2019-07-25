@@ -1,7 +1,8 @@
 #' Connect and parse UniProt Publication about a protein information.
 #'
 #' The function is work to retrieve Publication data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Publication data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' For more information about what included in the Publication 
+#' data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetPublication(ProteinAccList , directorypath = NULL)
 #'
@@ -12,7 +13,7 @@
 #' @return DataFrame where rows names are the accession
 #'      and columns contains the Publication of protein from the UniProt
 #'
-#' @examples GetPublication("O14520")
+#' @examples Obj <- GetPublication("O14520")
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'

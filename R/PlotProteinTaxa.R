@@ -18,7 +18,7 @@ PlotProteinTaxa <- function(ProteinsData , directorypath = NULL)
   TaxaPlot <- ggplot(ProteinsData , aes(x = rownames(ProteinsData) , fill = ProteinsData$Organism)) +
     geom_bar() + theme(axis.text.x  = element_text(angle = 90 , hjust = 1 , vjust = 0.5) , axis.title.y = element_blank() , axis.text.y = element_blank()) + xlab("Protein Accession") +
     guides(fill=guide_legend(title="Orgainsims"))
-  TaxaPlot
+  plot(TaxaPlot)
   if (!is.null(directorypath)){
   ggsave(paste0(directorypath, "//" ,"Proteins Taxonomy.png") ,plot = TaxaPlot , device = "png")
   }

@@ -1,9 +1,12 @@
 #' Connect and parse UniProt database identifiers information.
 #'
-#' The function is work to convert the UniProtKB AC/ID to any database identifiers available by the UniProtKB.
-#' For more information about available database identifiers see https://www.uniprot.org/help/api_idmapping.
+#' The function is work to convert the UniProtKB AC/ID to any database identifiers
+#' available by the UniProtKB.
+#' For more information about available database identifiers
+#' see https://www.uniprot.org/help/api_idmapping.
 #'
-#' @usage ConvertID(ProteinAccList , ID_from = "ACC+ID" , ID_to = NULL , directorypath = NULL)
+#' @usage ConvertID(ProteinAccList , ID_from = "ACC+ID" , ID_to = NULL
+#'  , directorypath = NULL)
 #'
 #' @param ProteinAccList  Vector of UniProt Accession/s
 #'
@@ -22,7 +25,7 @@
 #'
 #' @seealso To understand the Abbreviation used, see https://www.uniprot.org/help/api_idmapping
 #'
-#' @examples ConvertID("O14520" , "ACC+ID" , "EMBL")
+#' @examples Obj <- ConvertID("O14520" , "ACC+ID" , "EMBL")
 #'
 #' @export
 #'

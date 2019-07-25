@@ -1,7 +1,8 @@
 #' Connect and parse UniProt Names Taxa information.
 #'
 #'The function is work to retrieve Names Taxa data from UniProt for a list of proteins accessions.
-#'For more information about what included in the Names Taxa data see https://www.uniprot.org/help/uniprotkb_column_names.
+#'For more information about what included in the NamesTaxa
+#'data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetNamesTaxa(ProteinAccList , directorypath = NULL)
 #'
@@ -14,7 +15,7 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @examples GetNamesTaxa("O14520")
+#' @examples Obj <- GetNamesTaxa("O14520")
 #'
 #' @export
 #'

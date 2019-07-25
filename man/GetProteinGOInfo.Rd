@@ -16,14 +16,15 @@ DataFrame where rows names are the accession
      and columns contains the information of Gene ontology of protein from the UniProt
 }
 \description{
-The function is work to retrieve proteins gene ontology  data from UniProt for a list of proteins accessions.
-For more information about what included in the proteins gene ontology  data see https://www.uniprot.org/help/uniprotkb_column_names.
+The function is work to retrieve proteins gene ontology  data from UniProt
+for a list of proteins accessions.For more information about what included in the
+proteins gene ontology data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
 \examples{
-GetProteinGOInfo("O14520")
+Obj <- GetProteinGOInfo("O14520")
 
 }
 \author{

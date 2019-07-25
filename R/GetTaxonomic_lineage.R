@@ -1,7 +1,8 @@
 #' Connect and parse UniProt Taxonomic_lineage information.
 #'
 #' The function is work to retrieve Taxonomic_lineage data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Taxonomic_lineage data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' For more information about what included in the Taxonomic_lineage 
+#' data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetTaxonomic_lineage(ProteinAccList, directorypath = NULL)
 #'
@@ -14,7 +15,7 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @examples GetTaxonomic_lineage("O14520")
+#' @examples Obj <- GetTaxonomic_lineage("O14520")
 #'
 #' @author Mohmed Soudy and Ali Mostafa
 #'

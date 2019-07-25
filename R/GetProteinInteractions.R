@@ -1,7 +1,8 @@
 #' Connect and parse UniProt protein Interactions information.
 #'
-#' The function is work to retrieve protein Interactions data from UniProt for a list of proteins accessions.
-#' For more information about what included in the protein Interactions data see https://www.uniprot.org/help/uniprotkb_column_names.
+#' The function is work to retrieve protein Interactions data from UniProt for a
+#' list of proteins accessions.For more information about what included in the 
+#' protein Interactions data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetProteinInteractions(ProteinAccList , directorypath = NULL)
 #'
@@ -12,7 +13,7 @@
 #' @return DataFrame where rows names are the accession
 #'      and columns contains the information of protein Interactions from the UniProt
 #'
-#' @examples GetProteinInteractions("ProteinAccession")
+#' @examples Obj <- GetProteinInteractions("ProteinAccession")
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
