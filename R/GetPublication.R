@@ -1,7 +1,7 @@
 #' Connect and parse UniProt Publication about a protein information.
 #'
 #' The function is work to retrieve Publication data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Publication 
+#' For more information about what included in the Publication
 #' data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetPublication(ProteinAccList , directorypath = NULL)
@@ -17,7 +17,7 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 #'
 #' @export
 

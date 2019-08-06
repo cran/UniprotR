@@ -1,6 +1,6 @@
 #' Connect and parse UniProt information.
 #'
-#' This Function is used to plot location of the accession/s in the chromosomes.
+#' This Function is used to plot location's frequency in the data of the accession/s in the chromosomes.
 #'
 #' @usage PlotSummaryInfo (ProteinDataObject,directorypath = NULL)
 #'
@@ -8,7 +8,7 @@
 #'
 #' @param directorypath path to save excel file containig results returened by the function.
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 #'
 #' @export
 PlotSummaryInfo <- function(ProteinDataObject,directorypath = NULL)
@@ -16,17 +16,17 @@ PlotSummaryInfo <- function(ProteinDataObject,directorypath = NULL)
   ChromoCount <- ddply(ProteinDataObject, .(ProteinDataObject$Proteomes), nrow)
   ChromoCount %>%
     mutate(freq = percent(ChromoCount$V1 / sum(ChromoCount$V1))) -> ChromoCount
+  ChromoCount <- ChromoCount[order(ChromoCount$V1 , decreasing = TRUE) , ]
 
-  ChromoSummary <- ggplot(ChromoCount, aes(x = ChromoCount$`ProteinDataObject$Proteomes`, y = ChromoCount$V1)) +
-    geom_bar(fill = "#0073C2FF", stat = "identity") + xlab("Chromosomes") + ylab("frequency") +
-    geom_text(aes(label = ChromoCount$freq), vjust = -0.3) + theme(axis.text.x = element_text(angle = 90 , hjust = 1 , vjust = 0.5))+
-    theme_bw()
-  
+  ChromoSummary <- ggplot(ChromoCount, aes(x = reorder(ChromoCount$`ProteinDataObject$Proteomes` , ChromoCount$V1), y = ChromoCount$V1)) +
+    geom_bar(fill = "#0073C2FF", stat = "identity" , alpha = 0.7) + xlab("Chromosomes") + ylab("frequency") +
+    geom_text(aes(label = ChromoCount$freq), vjust = -0.3) + theme(axis.text.x = element_text(angle = 90 , hjust = 1 , vjust = 0.5))
+  ChromoSummary <- ChromoSummary + coord_flip()
   plot(ChromoSummary)
- if(!is.null(directorypath))
+   if(!is.null(directorypath))
  {
  write.csv(ChromoCount , paste0(directorypath , "/" , "Chromosomes Info Summary.csv"))
- ggsave(paste0(directorypath , "/"  , "Chromosoes Summary.png") , plot = ChromoSummary , device = "png" , height = (max(ChromoCount$V1) + 1))
+ ggsave(paste0(directorypath , "/"  , "Chromosoes Summary.jpeg") , plot = ChromoSummary , device = "jpeg" , dpi = 320, height = (max(ChromoCount$V1) + 1) , width = (max(ChromoCount$freq) + 1))
 
  }
 }

@@ -1,7 +1,7 @@
 #' Connect and parse UniProt protein Interactions information.
 #'
 #' The function is work to retrieve protein Interactions data from UniProt for a
-#' list of proteins accessions.For more information about what included in the 
+#' list of proteins accessions.For more information about what included in the
 #' protein Interactions data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetProteinInteractions(ProteinAccList , directorypath = NULL)
@@ -17,10 +17,9 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 
 GetProteinInteractions <- function(ProteinAccList , directorypath = NULL)
 {

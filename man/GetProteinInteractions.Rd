@@ -17,7 +17,7 @@ DataFrame where rows names are the accession
 }
 \description{
 The function is work to retrieve protein Interactions data from UniProt for a
-list of proteins accessions.For more information about what included in the 
+list of proteins accessions.For more information about what included in the
 protein Interactions data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
@@ -28,5 +28,5 @@ Obj <- GetProteinInteractions("ProteinAccession")
 
 }
 \author{
-Mohmed Soudy and Ali Mostafa
+Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

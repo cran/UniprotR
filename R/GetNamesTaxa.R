@@ -19,7 +19,7 @@
 #'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 
 GetNamesTaxa <- function(ProteinAccList , directorypath = NULL)
 {

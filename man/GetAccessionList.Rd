@@ -16,5 +16,5 @@ a vector of UniProt Accession/s
 This function can be used to get a list of UniProt Accession/s from a csv file.
 }
 \author{
-Mohmed Soudy and Ali Mostafa
+Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

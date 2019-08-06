@@ -34,9 +34,6 @@ The function also, Creates a csv file with the retrieved information.
 Obj <- ConvertID("O14520" , "ACC+ID" , "EMBL")
 
 }
-\seealso{
-To understand the Abbreviation used, see https://www.uniprot.org/help/api_idmapping
-}
 \author{
-Mohmed Soudy and Ali Mostafa
+Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

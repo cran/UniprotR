@@ -14,10 +14,9 @@
 #' @return DataFrame where rows names are the accession
 #'      and columns contains the information retrieved from the UniProt
 #'
-#'
 #' @examples Obj <- GetProteinInteractions("O14520")
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 #'
 #' @export
 

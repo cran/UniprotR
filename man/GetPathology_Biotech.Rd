@@ -16,7 +16,7 @@ DataFrame where rows names are the accession
      and columns contains the information retrieved from the UniProt
 }
 \description{
-The function is work to retrieve Pathology_Biotech data from UniProt for 
+The function is work to retrieve Pathology_Biotech data from UniProt for
 a list of proteins accessions.For more information about what included in the
 Pathology_Biotech data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
@@ -28,5 +28,5 @@ Obj <- GetPathology_Biotech("O14520")
 
 }
 \author{
-Mohmed Soudy and Ali Mostafa
+Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

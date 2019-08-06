@@ -1,7 +1,7 @@
 #' Connect and parse UniProt Taxonomic_lineage information.
 #'
 #' The function is work to retrieve Taxonomic_lineage data from UniProt for a list of proteins accessions.
-#' For more information about what included in the Taxonomic_lineage 
+#' For more information about what included in the Taxonomic_lineage
 #' data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetTaxonomic_lineage(ProteinAccList, directorypath = NULL)
@@ -17,7 +17,7 @@
 #'
 #' @examples Obj <- GetTaxonomic_lineage("O14520")
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 #'
 #' @export
 #'
@@ -25,17 +25,7 @@
 GetTaxonomic_lineage <- function(ProteinAccList , directorypath = NULL){
 
   # Sequences information to be collected
-  columns <- c("lineage(all)","lineage(SUPERKINGDOM)","lineage(KINGDOM)",
-               "lineage(SUBKINGDOM)","lineage(SUPERPHYLUM)",
-               "lineage(PHYLUM)","lineage(SUBPHYLUM)","lineage(SUPERCLASS)",
-               "lineage(CLASS)","lineage(SUBCLASS)","lineage(INFRACLASS)",
-               "lineage(SUPERORDER)","lineage(ORDER)","lineage(SUBORDER)",
-               "lineage(INFRAORDER)","lineage(PARVORDER)","lineage(SUPERFAMILY)",
-               "lineage(FAMILY)","lineage(SUBFAMILY)","lineage(TRIBE)",
-               "lineage(SUBTRIBE)","lineage(GENUS)","lineage(SUBGENUS)",
-               "lineage(SPECIES GROUP)","lineage(SPECIES SUBGROUP)",
-               "lineage(SPECIES)","lineage(SUBSPECIES)","lineage(VARIETAS)",
-               "lineage(FORMA)")
+  columns <- c("lineage(all),lineage(SUPERKINGDOM),lineage(KINGDOM),lineage(SUBKINGDOM),lineage(SUPERPHYLUM),lineage(PHYLUM),lineage(SUBPHYLUM),lineage(SUPERCLASS),lineage(CLASS),lineage(SUBCLASS),lineage(INFRACLASS),lineage(SUPERORDER),lineage(ORDER),lineage(SUBORDER), lineage(INFRAORDER),lineage(PARVORDER),lineage(SUPERFAMILY),lineage(FAMILY),lineage(SUBFAMILY),lineage(TRIBE),lineage(SUBTRIBE),lineage(GENUS),lineage(SUBGENUS),lineage(SPECIES GROUP),lineage(SPECIES SUBGROUP),lineage(SPECIES),lineage(SUBSPECIES),lineage(VARIETAS),lineage(FORMA)")
 
 
   baseUrl <- "http://www.uniprot.org/uniprot/"

@@ -23,13 +23,11 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @seealso To understand the Abbreviation used, see https://www.uniprot.org/help/api_idmapping
-#'
 #' @examples Obj <- ConvertID("O14520" , "ACC+ID" , "EMBL")
 #'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 
 ConvertID <- function(ProteinAccList, ID_from = "ACC+ID", ID_to = NULL , directorypath = NULL)
 

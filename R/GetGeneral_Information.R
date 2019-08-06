@@ -1,7 +1,7 @@
 #' Connect and parse UniProt General Information.
 #'
 #' The function is work to retrieve General Information data from UniProt
-#' for a list of proteins accessions.For more information about what included in the 
+#' for a list of proteins accessions.For more information about what included in the
 #' General Information data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
 #' @usage GetGeneral_Information(ProteinAccList , directorypath = NULL)
@@ -19,7 +19,7 @@
 #'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 
 GetGeneral_Information <- function(ProteinAccList , directorypath = NULL)
 {

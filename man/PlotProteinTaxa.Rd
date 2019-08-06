@@ -4,10 +4,10 @@
 \alias{PlotProteinTaxa}
 \title{Connect and parse UniProt information.}
 \usage{
-PlotProteinTaxa(ProteinsData , directorypath = NULL)
+PlotProteinTaxa(ProteinDataObject , directorypath = NULL)
 }
 \arguments{
-\item{ProteinsData}{input a Dataframe of proteins as rownames.}
+\item{ProteinDataObject}{input a Dataframe of proteins as rownames.}
 
 \item{directorypath}{path to save excel file containig results returened by the function.}
 }
@@ -15,5 +15,5 @@ PlotProteinTaxa(ProteinsData , directorypath = NULL)
 This Function is used to plot different taxas found of the accessions.
 }
 \author{
-Mohmed Soudy and Ali Mostafa
+Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

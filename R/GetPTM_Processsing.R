@@ -17,7 +17,7 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 #'
 #' @export
 
@@ -25,15 +25,7 @@
 GetPTM_Processsing<- function(ProteinAccList, directorypath = NULL ){
 
   # PTM_Processsing information to be collected
-  columns <- c("comment(PTM)","feature(CHAIN)",
-               "feature(CROSS LINK)","feature(DISULFIDE BOND)",
-               "feature(GLYCOSYLATION)","feature(INITIATOR METHIONINE)",
-               "feature(LIPIDATION)","feature(MODIFIED RESIDUE)",
-               "feature(PEPTIDE)","feature(PROPEPTIDE)",
-               "feature(SIGNAL)","feature(TRANSIT)")
-
-
-
+  columns <- c("comment(PTM),feature(CHAIN),feature(CROSS LINK),feature(DISULFIDE BOND),feature(GLYCOSYLATION),feature(INITIATOR METHIONINE),feature(LIPIDATION),feature(MODIFIED RESIDUE),feature(PEPTIDE),feature(PROPEPTIDE),feature(SIGNAL),feature(TRANSIT)")
   baseUrl <- "http://www.uniprot.org/uniprot/"
   ProteinInfoParsed_total = data.frame()
   for (ProteinAcc in ProteinAccList)

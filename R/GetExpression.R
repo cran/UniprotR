@@ -20,13 +20,12 @@
 #'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 
 GetExpression <- function(ProteinAccList , directorypath = NULL){
 
     # Expression information to be collected
-    columns <- c("comment(DEVELOPMENTAL STAGE)","comment(INDUCTION)","comment(TISSUE SPECIFICITY)")
-
+    columns <- c("comment(DEVELOPMENTAL STAGE),comment(INDUCTION),comment(TISSUE SPECIFICITY)")
     baseUrl <- "http://www.uniprot.org/uniprot/"
     ProteinInfoParsed_total = data.frame()
     for (ProteinAcc in ProteinAccList)

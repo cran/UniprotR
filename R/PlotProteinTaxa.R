@@ -2,49 +2,26 @@
 #'
 #' This Function is used to plot different taxas found of the accessions.
 #'
-#' @usage PlotProteinTaxa(ProteinsData , directorypath = NULL)
+#' @usage PlotProteinTaxa(ProteinDataObject , directorypath = NULL)
 #'
-#' @param ProteinsData input a Dataframe of proteins as rownames.
+#' @param ProteinDataObject input a Dataframe of proteins as rownames.
 #'
 #' @param directorypath path to save excel file containig results returened by the function.
 #'
-#'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 #'
 #' @export
 #'
-PlotProteinTaxa <- function(ProteinsData , directorypath = NULL)
+PlotProteinTaxa <- function(ProteinDataObject , directorypath = NULL)
 {
-  TaxaPlot <- ggplot(ProteinsData , aes(x = rownames(ProteinsData) , fill = ProteinsData$Organism)) +
-    geom_bar() + theme(axis.text.x  = element_text(angle = 90 , hjust = 1 , vjust = 0.5) , axis.title.y = element_blank() , axis.text.y = element_blank()) + xlab("Protein Accession") +
-    guides(fill=guide_legend(title="Orgainsims"))
+  ChromoCount <- ddply(ProteinDataObject, .(ProteinDataObject$Organism), nrow)
+  ChromoCount %>%
+    mutate(freq = percent(ChromoCount$V1 / sum(ChromoCount$V1))) -> ChromoCount
+
+  TaxaPlot <- ggplot(ChromoCount , aes(x = reorder(ChromoCount$`ProteinDataObject$Organism`,ChromoCount$V1) , y = ChromoCount$V1)) +
+    geom_bar(fill = "#0073C2FF", stat = "identity" , alpha = 0.7) + xlab("Organsims") + ylab("frequency") + theme(axis.text.x  = element_text(angle = 90 , hjust = 1 , vjust = 0.5) , axis.title.y = element_blank() , axis.text.y = element_blank()) + xlab("Protein Accession")
   plot(TaxaPlot)
   if (!is.null(directorypath)){
-  ggsave(paste0(directorypath, "//" ,"Proteins Taxonomy.png") ,plot = TaxaPlot , device = "png")
-  }
-}
-
-#' Connect and parse UniProt information.
-#'
-#' This Function is used to plot different locations where accession/s can be found in.
-#'
-#' @usage PlotProteinsLoc(ProteinsData, directorypath = NULL)
-#'
-#' @param ProteinsData input a Dataframe of proteins as rownames.
-#'
-#' @param directorypath path to save excel file containig results returened by the function.
-#'
-#' @author Mohmed Soudy and Ali Mostafa
-#'
-#' @export
-#'
-PlotProteinsLoc <- function(ProteinsData, directorypath = NULL)
-{
-  TaxaPlot <- ggplot(ProteinsData , aes(x = rownames(ProteinsData) , fill = ProteinsData$Proteomes)) +
-    geom_bar() + theme(axis.text.x  = element_text(angle = 90 , hjust = 1 , vjust = 0.5) , axis.title.y = element_blank() , axis.text.y = element_blank()) + xlab("Protein Accession") +
-    guides(fill=guide_legend(title="Chromosomes"))
-  TaxaPlot
-  if (!is.null(directorypath)){
-  ggsave(paste0(directorypath,"/","Proteins Locations.png") ,plot = TaxaPlot , device = "png")
+  ggsave(paste0(directorypath, "//" ,"Proteins Taxonomy.jpeg") ,plot = TaxaPlot , device = "jpeg" , dpi = 320)
   }
 }

@@ -1,6 +1,6 @@
 #' Connect and parse UniProt Protein Function information.
 #'
-#'The function is work to retrieve Protein Function data from UniProt for 
+#'The function is work to retrieve Protein Function data from UniProt for
 #'a list of proteins accessions.For more information about what included in the
 #'Protein Function data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
@@ -19,7 +19,7 @@
 #'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 
 GetProteinFunction <- function(ProteinAccList , directorypath = NULL)
 {

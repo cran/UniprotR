@@ -12,7 +12,7 @@
 #'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 #'
 GetpdbStructure <- function(ProteinAccList , directorypath = NULL)
 {
@@ -21,7 +21,7 @@ GetpdbStructure <- function(ProteinAccList , directorypath = NULL)
   {
     RequiredAcc <- paste0(baseUrl , ProteinAcc ,".pdb")
     Request_Response <- GET(RequiredAcc)
-    if(Request_Response == 200)
+    if(Request_Response$status_code == 200)
     {
       download.file(RequiredAcc , paste0(ProteinAcc,".pdb"))
     }

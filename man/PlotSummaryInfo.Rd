@@ -12,8 +12,8 @@ PlotSummaryInfo (ProteinDataObject,directorypath = NULL)
 \item{directorypath}{path to save excel file containig results returened by the function.}
 }
 \description{
-This Function is used to plot location of the accession/s in the chromosomes.
+This Function is used to plot location's frequency in the data of the accession/s in the chromosomes.
 }
 \author{
-Mohmed Soudy and Ali Mostafa
+Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

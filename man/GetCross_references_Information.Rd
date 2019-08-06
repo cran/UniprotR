@@ -16,9 +16,9 @@ DataFrame where rows names are the accession
      and columns contains the Cross-references Information of protein from the UniProt
 }
 \description{
-The function is work to retrieve Cross-references data from UniProt for a 
+The function is work to retrieve Cross-references data from UniProt for a
 list of proteins accessions.
-For more information about what included in the Cross-references 
+For more information about what included in the Cross-references
 data see https://www.uniprot.org/help/uniprotkb_column_names.
 }
 \note{
@@ -29,5 +29,5 @@ Obj <- GetCross_references_Information("O14520")
 
 }
 \author{
-Mohmed Soudy and Ali Mostafa
+Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

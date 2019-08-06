@@ -1,6 +1,6 @@
 #' Connect and parse UniProt Family Domains information.
 #'
-#' The function is work to retrieve Family Domains data from UniProt for a 
+#' The function is work to retrieve Family Domains data from UniProt for a
 #' list of proteins accessions.For more information about what included
 #' in the Family Domains data see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
@@ -19,17 +19,12 @@
 #'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 
 GetFamily_Domains<- function(ProteinAccList , directorypath = NULL){
 
   # Family_Domains information to be collected
-  columns <- c("comment(DOMAIN)","comment(SIMILARITY)",
-               "families","feature(COILED COIL)",
-               "feature(COMPOSITIONAL BIAS)","feature(DOMAIN EXTENT)",
-               "feature(MOTIF)","feature(REGION)","feature(REPEAT)",
-               	"feature(ZINC FINGER)")
-
+  columns <- c("comment(DOMAIN),comment(SIMILARITY),families,feature(COILED COIL),feature(COMPOSITIONAL BIAS),feature(DOMAIN EXTENT),feature(MOTIF),feature(REGION),feature(REPEAT),feature(ZINC FINGER)")
   baseUrl <- "http://www.uniprot.org/uniprot/"
   ProteinInfoParsed_total = data.frame()
   for (ProteinAcc in ProteinAccList)

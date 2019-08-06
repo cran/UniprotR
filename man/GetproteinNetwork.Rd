@@ -16,5 +16,5 @@ This function is connecting to stringdb and retrieve all possible interactions
 for the searched protein/s.
 }
 \author{
-Mohmed Soudy and Ali Mostafa
+Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

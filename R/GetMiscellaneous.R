@@ -19,15 +19,12 @@
 #'
 #' @export
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 
 GetMiscellaneous <- function(ProteinAccList , directorypath = NULL){
 
   # Miscellaneous information to be collected
-  columns <- c("annotation score","features","comment(CAUTION)","comment(MISCELLANEOUS)",
-               "keywords","context","existence","tools","reviewed")
-
-
+  columns <- c("annotation score,features,comment(CAUTION),comment(MISCELLANEOUS),keywords,context,existence,tools,reviewed")
   baseUrl <- "http://www.uniprot.org/uniprot/"
   ProteinInfoParsed_total = data.frame()
   for (ProteinAcc in ProteinAccList)

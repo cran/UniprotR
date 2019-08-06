@@ -5,20 +5,21 @@
 #'
 #' @section The first category for retrieving data:
 #' ____________________________________________
+#' ConstructLocTree
 #'
 #' GetCross_references_Information
 #'
-#' GetExpression_uniprot
+#' GetExpression
 #'
-#' GetFamily_Domains_uniprot
+#' GetFamily_Domains
 #'
 #' GetGeneral_Information
 #'
-#' GetMiscellaneous_uniprot
+#' GetMiscellaneous
 #'
 #' GetNamesTaxa
 #'
-#' GetPathology_Biotech_uniprot
+#' GetPathology_Biotech
 #'
 #' GetProteinFunction
 #'
@@ -28,17 +29,17 @@
 #'
 #' GetProteoAnnotator
 #'
-#' GetPTM_Processsing_uniprot
+#' GetPTM_Processsing
 #'
 #' GetPublication
 #'
-#' GetSequences_uniprot
+#' GetSequences
 #'
 #' GetSubcellular_location
 #'
 #' GetTaxaidentifier
 #'
-#' GetTaxonomic_lineage_uniprot
+#' GetTaxonomic_lineage
 #'
 #'
 #' each function has a description that could be reached by >>> ?Function_Name
@@ -46,14 +47,19 @@
 #' @section The second category for visualizing data:
 #' _______________________________________________
 #'
-#' PlotProteinsLoc
-#'
 #' PlotProteinTaxa
 #'
+#' PlotSummaryInfo
+#'
+#' PlotProteinGO_bio
+#'
+#' PlotProteinGO_cel
+#'
+#' PlotProteinGO_molc
 #'
 #' each function has a description that could be reached by  >>> ?Function_Name
 #'
-#' @author Mohmed Soudy and Ali Mostafa
+#' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 #'
 #' @docType package
 #' @name UniprotR
