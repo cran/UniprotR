@@ -1,4 +1,4 @@
-40ff2c348bdd66ff77a2c1b428c344ea *DESCRIPTION
+b9bb76ea4193ce52a1fb97af24c39fab *DESCRIPTION
 52e82fb39ca713b0fb1f600d2733066a *NAMESPACE
 8e3a019b492bb2b298da5ca157825155 *R/ConstructLocTree.R
 0b5f488505b8a6cda1e7020fad8dc126 *R/ConvertID.R
@@ -20,13 +20,13 @@ e66f91d9e1965795f41eff8c79426a0b *R/GetPublication.R
 f88041b305b3fe492d3d638abfe0dd8b *R/GetSubcellular_location.R
 b45555151ee47989a731a19ba5664f2c *R/GetTaxaidentifier.R
 aad79b9e2c2881602873484b9a5db80c *R/GetTaxonomic_lineage.R
-b1fc2449a361d10a4df622bcc6e8af2b *R/GetpdbStructure.R
+4ffa46371675cf557ec1492a78b2823c *R/GetpdbStructure.R
 e899230248e5814b61669ce08ac1879d *R/GetproteinNetwork.R
 4a949e951b7b665b77a2b18595fac9df *R/HandleBadRequests.R
-aaa3d9756ac7a34eb68f970a4b47f2f1 *R/PlotProteinTaxa.R
-eecb966571cc7cef10b48a25e56a1c6c *R/PlotSummaryInfo.R
+c6040806cb71eabf971707bbdd03053e *R/PlotProteinTaxa.R
+42ca02ec285b30150e1b80a4084e06ee *R/PlotSummaryInfo.R
 4cad531131a0673701d9e9f1630c82ec *R/UniprotR.r
-513a00b27f0d76836ee3c9840051defb *R/plot_GO.R
+84e63e2f0ca12dd5f81d4a6b1c5f9591 *R/plot_GO.R
 f86a439a2ffbba928ca4e624d295b10f *man/ConstructLocTree.Rd
 24570dc09cee8b29dbce027e1515eceb *man/ConvertID.Rd
 f91d8510896fd872583b5b46bd4325cb *man/GetAccessionList.Rd
@@ -55,4 +55,4 @@ ac6f5a127e8fedc313b73c00e972eccf *man/GetpdbStructure.Rd
 8859c20133a17dc0a521e89c41f64132 *man/PlotProteinGO_molc.Rd
 e28724c418a1465b19e5c4e0fd888a58 *man/PlotProteinTaxa.Rd
 2c4e6766fdb821eccd03df07829ab58f *man/PlotSummaryInfo.Rd
-8de1b8edf6b59e80f6dac48327072e48 *man/UniprotR.Rd
+eae97e0ab7cbdc0c2910e94821ab18fb *man/UniprotR.Rd

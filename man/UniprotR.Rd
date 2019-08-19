@@ -60,6 +60,11 @@ PlotProteinTaxa
 
 PlotSummaryInfo
 
+PlotProteinGO_bio
+
+PlotProteinGO_cel
+
+PlotProteinGO_molc
 
 each function has a description that could be reached by  >>> ?Function_Name
 }

@@ -42,8 +42,8 @@ PlotProteinGO_bio <- function(GO_df, dir_path = NA)
 
   colnames(occurences) <- c("biological_process","Frequences")
 
-  bar_plot <- ggplot(data=occurences, aes(x=occurences$biological_process, y=occurences$Frequences)) +
-    geom_bar(stat="identity", fill="steelblue") +
+  bar_plot <- ggplot(data=occurences, aes(x= reorder(occurences$biological_process , occurences$Frequences), y=occurences$Frequences)) +
+    geom_bar(stat="identity", fill="steelblue" , alpha = 0.7) + xlab("Frequency") + ylab("Biological function")+
     theme_minimal() +coord_flip() +theme(text = element_text(size=12))
   print (bar_plot)
 
@@ -100,10 +100,8 @@ PlotProteinGO_molc <- function(GO_df, dir_path = NA)
 
   colnames(occurences) <- c("molecular_functions","Frequences")
 
-
-
-  bar_plot <- ggplot(data=occurences, aes(x=occurences$molecular_functions, y=occurences$Frequences)) +
-    geom_bar(stat="identity", fill="steelblue") +
+  bar_plot <- ggplot(data=occurences, aes(x=reorder(occurences$molecular_functions , occurences$Frequences), y=occurences$Frequences)) +
+    geom_bar(stat="identity", fill="steelblue" , alpha = 0.7) + xlab("Frequency") + ylab("molecular function")+
     theme_minimal() +coord_flip() +theme(text = element_text(size=12))
   print (bar_plot)
 
@@ -160,13 +158,13 @@ PlotProteinGO_cel <- function(GO_df, dir_path = NA)
   colnames(occurences) <- c("cellular_components","Frequences")
 
 
-  bar_plot <- ggplot(data=occurences, aes(x=occurences$cellular_components, y=occurences$Frequences)) +
-    geom_bar(stat="identity", fill="steelblue") +
+  bar_plot <- ggplot(data=occurences, aes(x=reorder(occurences$cellular_components, occurences$Frequences), y=occurences$Frequences)) +
+    geom_bar(stat="identity", fill="steelblue" , alpha = 0.7) + xlab("Frequency") + ylab("cellular component")+
     theme_minimal() +coord_flip() +theme(text = element_text(size=12))
   print (bar_plot)
 
   if ( !is.na(dir_path) ) {
-    ggsave(paste0(dir_path, "//" ,"GO_plot_cell.jepg") ,plot = bar_plot , device = "jpeg",dpi = 300,width = 20, height = 10 )
+    ggsave(paste0(dir_path, "//" ,"GO_plot_cell.jpeg") ,plot = bar_plot , device = "jpeg",dpi = 300,width = 20, height = 10 )
   }
 
 }

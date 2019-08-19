@@ -18,10 +18,12 @@ PlotProteinTaxa <- function(ProteinDataObject , directorypath = NULL)
   ChromoCount %>%
     mutate(freq = percent(ChromoCount$V1 / sum(ChromoCount$V1))) -> ChromoCount
 
-  TaxaPlot <- ggplot(ChromoCount , aes(x = reorder(ChromoCount$`ProteinDataObject$Organism`,ChromoCount$V1) , y = ChromoCount$V1)) +
-    geom_bar(fill = "#0073C2FF", stat = "identity" , alpha = 0.7) + xlab("Organsims") + ylab("frequency") + theme(axis.text.x  = element_text(angle = 90 , hjust = 1 , vjust = 0.5) , axis.title.y = element_blank() , axis.text.y = element_blank()) + xlab("Protein Accession")
+  TaxaPlot <- ggplot(ChromoCount , aes(x = reorder(ChromoCount$`ProteinDataObject$Organism` , ChromoCount$V1) , y = ChromoCount$V1)) +
+    geom_bar(fill = "#0073C2FF", stat = "identity" , alpha = 0.7) + xlab("Organsims") + ylab("frequency") + theme(axis.text.x  = element_text(angle = 90 , hjust = 1 , vjust = 0.5) , axis.title.y = element_blank() , axis.text.y = element_blank()) + xlab("Organism Accession")+
+    geom_text(aes(label = ChromoCount$freq), vjust = -0.3) + theme(axis.text.x = element_text(angle = 90 , hjust = 1 , vjust = 0.5))
   plot(TaxaPlot)
+  print(ChromoCount)
   if (!is.null(directorypath)){
-  ggsave(paste0(directorypath, "//" ,"Proteins Taxonomy.jpeg") ,plot = TaxaPlot , device = "jpeg" , dpi = 320)
+  ggsave(paste0(directorypath, "//" ,"Proteins Taxonomy.jpeg") ,plot = TaxaPlot , device = "jpeg" , dpi = 320 , width =  10 , height = 12)
   }
 }

@@ -16,17 +16,16 @@ PlotSummaryInfo <- function(ProteinDataObject,directorypath = NULL)
   ChromoCount <- ddply(ProteinDataObject, .(ProteinDataObject$Proteomes), nrow)
   ChromoCount %>%
     mutate(freq = percent(ChromoCount$V1 / sum(ChromoCount$V1))) -> ChromoCount
-  ChromoCount <- ChromoCount[order(ChromoCount$V1 , decreasing = TRUE) , ]
 
   ChromoSummary <- ggplot(ChromoCount, aes(x = reorder(ChromoCount$`ProteinDataObject$Proteomes` , ChromoCount$V1), y = ChromoCount$V1)) +
     geom_bar(fill = "#0073C2FF", stat = "identity" , alpha = 0.7) + xlab("Chromosomes") + ylab("frequency") +
     geom_text(aes(label = ChromoCount$freq), vjust = -0.3) + theme(axis.text.x = element_text(angle = 90 , hjust = 1 , vjust = 0.5))
   ChromoSummary <- ChromoSummary + coord_flip()
+
   plot(ChromoSummary)
    if(!is.null(directorypath))
- {
- write.csv(ChromoCount , paste0(directorypath , "/" , "Chromosomes Info Summary.csv"))
- ggsave(paste0(directorypath , "/"  , "Chromosoes Summary.jpeg") , plot = ChromoSummary , device = "jpeg" , dpi = 320, height = (max(ChromoCount$V1) + 1) , width = (max(ChromoCount$freq) + 1))
-
- }
+     {
+     write.csv(ChromoCount , paste0(directorypath , "/" , "Chromosomes Info Summary.csv"))
+     ggsave(paste0(directorypath , "/"  , "Chromosoes Summary.jpeg") , plot = ChromoSummary , device = "jpeg" , dpi = 320, height =  11 , width = 10)
+     }
 }

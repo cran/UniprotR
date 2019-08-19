@@ -23,7 +23,7 @@ GetpdbStructure <- function(ProteinAccList , directorypath = NULL)
     Request_Response <- GET(RequiredAcc)
     if(Request_Response$status_code == 200)
     {
-      download.file(RequiredAcc , paste0(ProteinAcc,".pdb"))
+      download.file(RequiredAcc , paste0(directorypath , "//" , ProteinAcc,".pdb"))
     }
     else{
       HandleBadRequests(Request_Response)
