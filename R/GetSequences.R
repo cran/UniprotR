@@ -37,6 +37,7 @@ GetSequences <- function(ProteinAccList, directorypath = NULL){
     RequestUrl <- paste0(baseUrl , ProteinName_url)
     if (Request$status_code == 200){
       # parse the information in DataFrame
+      Test <- read.table(RequestUrl, header = TRUE, sep = '\t')
       ProteinDataTable <- tryCatch(read.table(RequestUrl, header = TRUE, sep = '\t'), error=function(e) NULL)
       if (!is.null(ProteinDataTable))
       {

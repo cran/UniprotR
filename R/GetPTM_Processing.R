@@ -4,7 +4,7 @@
 #' For more information about what included in the PTM_Processsing data
 #' see https://www.uniprot.org/help/uniprotkb_column_names.
 #'
-#' @usage GetPTM_Processsing(ProteinAccList, directorypath = NULL)
+#' @usage GetPTM_Processing(ProteinAccList, directorypath = NULL)
 #'
 #' @param ProteinAccList Vector of UniProt Accession/s
 #'
@@ -13,7 +13,7 @@
 #' @return DataFrame where rows names are the accession
 #'      and columns contains the information retrieved from the UniProt
 #'
-#' @examples Obj <- GetPTM_Processsing("O14520" )
+#' @examples Obj <- GetPTM_Processing("O14520" )
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
@@ -22,7 +22,7 @@
 #' @export
 
 
-GetPTM_Processsing<- function(ProteinAccList, directorypath = NULL ){
+GetPTM_Processing<- function(ProteinAccList, directorypath = NULL ){
 
   # PTM_Processsing information to be collected
   columns <- c("comment(PTM),feature(CHAIN),feature(CROSS LINK),feature(DISULFIDE BOND),feature(GLYCOSYLATION),feature(INITIATOR METHIONINE),feature(LIPIDATION),feature(MODIFIED RESIDUE),feature(PEPTIDE),feature(PROPEPTIDE),feature(SIGNAL),feature(TRANSIT)")
