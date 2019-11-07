@@ -1,8 +1,7 @@
-1fb5dd4cd954bc0a98a71f114b982e29 *DESCRIPTION
-7162c11f79ab9d18d24e21510945ff3d *NAMESPACE
+b6bf74731d5c06bb189bf482d21674e9 *DESCRIPTION
+9b4d8c518bda7b598fd5a1a34aa1d688 *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
-76daf772791951e47f446093305f7860 *R/ConstructPhylogeny.R
 0b5f488505b8a6cda1e7020fad8dc126 *R/ConvertID.R
 f3132be765683526dfddbfb4bffa8680 *R/GetAccessionList.R
 32e0fa31c5b7e7e5617267e0ea5c72e7 *R/GetCross_references_Information.R
@@ -38,7 +37,6 @@ efcfd2e71a61a018b9a5d1af79bf47ee *R/ProcessAcc.R
 06e40040fadf7dbf7b485b08b2aca39d *R/plot_GO.R
 31f53edf90bb2500ef1ac5a238ab8ee6 *man/ConstructGenesTree.Rd
 fc0ccd2c63755a1d0a9f41502b81ed42 *man/ConstructLocTree.Rd
-4b7fa58c5c5333cfc001d5d9377e5b82 *man/ConstructPhylogeny.Rd
 24570dc09cee8b29dbce027e1515eceb *man/ConvertID.Rd
 f91d8510896fd872583b5b46bd4325cb *man/GetAccessionList.Rd
 ec5cf13e8d4ef02a50d74ead72fcb850 *man/GetCross_references_Information.Rd
