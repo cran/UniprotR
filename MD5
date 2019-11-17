@@ -1,5 +1,5 @@
-b6bf74731d5c06bb189bf482d21674e9 *DESCRIPTION
-9b4d8c518bda7b598fd5a1a34aa1d688 *NAMESPACE
+675821ffa5baf1f63f3e50ac7a95d856 *DESCRIPTION
+8797269a6aa95a82d519cd1374f4b45c *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
 0b5f488505b8a6cda1e7020fad8dc126 *R/ConvertID.R
@@ -17,7 +17,7 @@ f3132be765683526dfddbfb4bffa8680 *R/GetAccessionList.R
 49c382344555b5bcf780b3ebb63d0043 *R/GetProteinInteractions.R
 78d17553ef66adc5af08986f9dfdd6c4 *R/GetProteoAnnotator.R
 e66f91d9e1965795f41eff8c79426a0b *R/GetPublication.R
-656cb3a078fa3ca75c8e57bbf33a0136 *R/GetSequences.R
+ce84bb4299efd19084197d9e5ff546eb *R/GetSequences.R
 f88041b305b3fe492d3d638abfe0dd8b *R/GetSubcellular_location.R
 b45555151ee47989a731a19ba5664f2c *R/GetTaxaidentifier.R
 aad79b9e2c2881602873484b9a5db80c *R/GetTaxonomic_lineage.R

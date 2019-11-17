@@ -1,6 +1,6 @@
 Package: UniprotR
 Title: Retrieving Information of Proteins from Uniprot
-Version: 1.1.1
+Version: 1.1.2
 Authors@R: c(person("Mohamed", "Soudy", email = "MohmedSoudy2009@gmail.com", role=c("aut", "cre")), person("Ali", "Mostafa", email = "ali.mo.anwar@std.agr.cu.edu.eg", role = "aut"))
 Author: Mohamed Soudy [aut, cre],
   Ali Mostafa [aut]
@@ -14,6 +14,6 @@ Imports: utils , grDevices , graphics, httr , plyr , dplyr , scales ,
         stats , magrittr , magick , data.tree , ggplot2 , tidyverse ,
         grid , gridExtra , ggpubr , alakazam
 NeedsCompilation: no
-Packaged: 2019-11-07 07:07:23 UTC; Soudy
+Packaged: 2019-11-17 11:52:25 UTC; Soudy
 Repository: CRAN
-Date/Publication: 2019-11-07 11:10:02 UTC
+Date/Publication: 2019-11-17 12:20:02 UTC

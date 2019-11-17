@@ -3,7 +3,7 @@
 importFrom("grDevices", "dev.off", "pdf")
 importFrom("graphics", "plot" , "title")
 importFrom("utils", "download.file", "read.csv", "read.table",
-             "write.csv" , "write.table")
+             "write.csv" , "write.table" , "URLencode")
 importFrom("httr" , "GET")
 importFrom("magick" , "image_read")
 importFrom("scales" , "percent")
