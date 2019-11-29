@@ -1,4 +1,4 @@
-675821ffa5baf1f63f3e50ac7a95d856 *DESCRIPTION
+30c6c8912e87dc5554df693f38d465fb *DESCRIPTION
 8797269a6aa95a82d519cd1374f4b45c *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
@@ -16,6 +16,8 @@ f3132be765683526dfddbfb4bffa8680 *R/GetAccessionList.R
 80839123b371895b2d0a6f6f6bd1f929 *R/GetProteinGOInfo.R
 49c382344555b5bcf780b3ebb63d0043 *R/GetProteinInteractions.R
 78d17553ef66adc5af08986f9dfdd6c4 *R/GetProteoAnnotator.R
+41e9a65fd71c5dd8f40c62457cb3ce1f *R/GetProteomeFasta.R
+1ce635a6a0a3cc7ce0f97e28d14dd46e *R/GetProteomeInfo.R
 e66f91d9e1965795f41eff8c79426a0b *R/GetPublication.R
 ce84bb4299efd19084197d9e5ff546eb *R/GetSequences.R
 f88041b305b3fe492d3d638abfe0dd8b *R/GetSubcellular_location.R
@@ -51,6 +53,8 @@ b00f3f6ed0c62754e1b998a4e7f913c7 *man/GetProteinAnnontate.Rd
 0fe81960ffb8b5883eea40bd602f3bfa *man/GetProteinFunction.Rd
 5d8847e11b529f4e9a83d74a8b3a0449 *man/GetProteinGOInfo.Rd
 c527591160cc43e8c4bffb06de378d1f *man/GetProteinInteractions.Rd
+9e467c4147bf9294a2c13df878c817dd *man/GetProteomeFasta.Rd
+392b91e60b433cb4df3b7e5ae9f8b958 *man/GetProteomeInfo.Rd
 d8f17e93284a0b2cd2cc479ce0bf40a3 *man/GetPublication.Rd
 871489ad29db90a027a6de2e84b6f134 *man/GetSequences.Rd
 eb4598483a16c6b5df6a279a783dedeb *man/GetSubcellular_location.Rd
