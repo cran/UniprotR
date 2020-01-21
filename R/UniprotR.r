@@ -3,9 +3,8 @@
 #' UniprotR provides different functions to retrieve proteins information provided by the UniProt.
 #' UniprotR could be divided into two categories one for retrieving and one for visualizing the data.
 #'
-#' @section The first category for retrieving data:
+#' @section Functions that retrieve information
 #' ____________________________________________
-#' ConstructLocTree
 #'
 #' GetCross_references_Information
 #'
@@ -29,7 +28,7 @@
 #'
 #' GetProteoAnnotator
 #'
-#' GetPTM_Processsing
+#' GetPTM_Processing
 #'
 #' GetPublication
 #'

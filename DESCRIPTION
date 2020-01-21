@@ -1,6 +1,6 @@
 Package: UniprotR
 Title: Retrieving Information of Proteins from Uniprot
-Version: 1.2.2
+Version: 1.2.3
 Authors@R: c(person("Mohamed", "Soudy", email = "MohmedSoudy2009@gmail.com", role=c("aut", "cre")), person("Ali", "Mostafa", email = "ali.mo.anwar@std.agr.cu.edu.eg", role = "aut"))
 Author: Mohamed Soudy [aut, cre],
   Ali Mostafa [aut]
@@ -13,7 +13,11 @@ RoxygenNote: 6.1.1
 Imports: utils , grDevices , graphics, httr , plyr , dplyr , scales ,
         stats , magrittr , magick , data.tree , ggplot2 , tidyverse ,
         grid , gridExtra , ggpubr , alakazam
+URL: https://github.com/Proteomicslab57357/UniprotR
+BugReports: https://github.com/Proteomicslab57357/UniprotR/issues
 NeedsCompilation: no
-Packaged: 2019-11-29 09:32:47 UTC; Soudy
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+Packaged: 2020-01-21 13:10:37 UTC; RSH
 Repository: CRAN
-Date/Publication: 2019-11-29 11:20:02 UTC
+Date/Publication: 2020-01-21 14:30:06 UTC
