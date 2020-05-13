@@ -17,16 +17,22 @@ plotGoannotation <- function(ProteinDataObject,directorypath = NULL)
   BiologicalDF <- Goparse(ProteinDataObject , 3)
   #Plot top 5
   BiologicalDF <- BiologicalDF[1:10,]
+  
+  BiologicalDF <- na.omit(BiologicalDF)
 
   #Get molecuar function
   MolecularDF <- Goparse(ProteinDataObject , 4)
   #Plot top 5
   MolecularDF <- MolecularDF[1:10,]
+  
+  MolecularDF <- na.omit(MolecularDF)
 
   #Get cellular component
   CellularDF <- Goparse(ProteinDataObject , 5)
   #Plot top 5
   CellularDF <- CellularDF[1:10,]
+  
+  CellularDF <- na.omit(CellularDF)
 
   group <- rep("Biological process" , 10)
   group <- c(group , rep("Molecular function" , 10))
@@ -103,7 +109,7 @@ plotGoannotation <- function(ProteinDataObject,directorypath = NULL)
 
     # Add base line information
     geom_segment(data=base_data, aes(x = start, y = -5, xend = end, yend = -5), colour = "black", alpha=0.8, size=0.6 , inherit.aes = FALSE )  +
-    geom_text(data=base_data, aes(x = title, y = -18, label=group), hjust=c(1,0.7,0), colour = "black", alpha=0.8, size=5, fontface="bold", inherit.aes = FALSE)
+    geom_text(data=base_data, aes(x = title, y = -18, label=group), hjust=c(1,0.7,0), colour = "black", alpha=0.8, size=2, fontface="bold", inherit.aes = FALSE)
 
   p
   if (!is.null(directorypath)){
