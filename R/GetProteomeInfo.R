@@ -15,8 +15,21 @@
 #' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 GetProteomeInfo <- function(ProteomeID , directorypath = NULL)
 {
+  if(!has_internet())
+  {
+    message("Please connect to the internet as the package requires internect connection.")
+    return()
+  }
   baseUrl <- "https://www.uniprot.org/uniprot/?query=proteome:"
-  Request <- GET(paste0(baseUrl , ProteomeID,"&format=tab"))
+  Request <- tryCatch(
+    {
+      GET(paste0(baseUrl , ProteomeID,"&format=tab"), timeout(60))
+    },error = function(cond)
+    {
+      message("Internet connection problem occurs and the function will return the original error")
+      message(cond)
+    }
+  )
   ProteinInfoParsed <- data.frame()
   if (Request$status_code == 200)
     {

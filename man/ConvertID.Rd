@@ -30,10 +30,6 @@ see https://www.uniprot.org/help/api_idmapping.
 \note{
 The function also, Creates a csv file with the retrieved information.
 }
-\examples{
-Obj <- ConvertID("O14520" , "ACC+ID" , "EMBL")
-
-}
 \author{
 Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
 }

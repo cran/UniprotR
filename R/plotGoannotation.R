@@ -105,7 +105,7 @@ plotGoannotation <- function(ProteinDataObject,directorypath = NULL)
       plot.margin = unit(rep(-1,4), "cm")
     ) +
     coord_polar() +
-    geom_text(data=label_data, aes(x=id, y=value+10, label=individual, hjust=hjust), color="black", fontface="bold",alpha=0.6, size=5, angle= label_data$angle, inherit.aes = FALSE ) +
+    geom_text(data=label_data, aes(x=id, y=value+10, label=individual, hjust=hjust), color="black", fontface="bold",alpha=0.6, size=0.5, angle= label_data$angle, inherit.aes = FALSE ) +
 
     # Add base line information
     geom_segment(data=base_data, aes(x = start, y = -5, xend = end, yend = -5), colour = "black", alpha=0.8, size=0.6 , inherit.aes = FALSE )  +

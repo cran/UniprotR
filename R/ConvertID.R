@@ -23,8 +23,6 @@
 #'
 #' @note The function also, Creates a csv file with the retrieved information.
 #'
-#' @examples Obj <- ConvertID("O14520" , "ACC+ID" , "EMBL")
-#'
 #' @export
 #'
 #' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
@@ -79,7 +77,16 @@ ConvertID <- function(ProteinAccList, ID_from = "ACC+ID", ID_to = NULL , directo
 
         RequestUrl <- paste0(baseUrl , ProteinName_url)
         # parse the information in DataFrame
-        ProteinDataTable <- read.table(RequestUrl, header = TRUE, sep = '\t')$To
+        
+        ProteinDataTable <- tryCatch(
+          {
+            read.table(RequestUrl, header = TRUE, sep = '\t')$To
+          },error = function(cond)
+          {
+            message("Internet connection problem occurs and the function will return the original error")
+            message(cond)
+          }
+        ) 
 
         ProteinDataTable <- toString(ProteinDataTable)
 
