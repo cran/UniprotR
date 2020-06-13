@@ -30,6 +30,11 @@ GetProteomeFasta <- function(ProteomeID , directorypath = NULL)
       message(cond)
     }
   )
+  if (length(Request) == 0)
+  {
+    message("Internet connection problem occurs")
+    return()
+  }
   if (Request$status_code == 200)
   {
     download.file(Request$url ,paste0(directorypath ,"/" , ProteomeID, ".fasta"))
