@@ -4,10 +4,10 @@
 \alias{plotGoannotation}
 \title{Connect and parse UniProt information.}
 \usage{
-plotGoannotation(ProteinDataObject,directorypath = NULL)
+plotGoannotation(GOObj,directorypath = NULL)
 }
 \arguments{
-\item{ProteinDataObject}{input a Dataframe returned from GetProteinGOInfo function}
+\item{GOObj}{Dataframe.}
 
 \item{directorypath}{path to save files returened by the function.}
 }

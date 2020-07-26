@@ -62,31 +62,37 @@ PlotGoInfo <- function(GOObj , directorypath = NULL)
 {
   #Get Biologica process Data
   BiologicalDF <- Goparse(GOObj , 3)
-  #Plot top 5
+  #Plot top 10
   BiologicalDF <- BiologicalDF[1:10,]
-  rownames(BiologicalDF) <- c()
+  BiologicalDF <- na.omit(BiologicalDF)
+  
   #Plot Biological function
   BiologicalPlot <- ggplot(data=BiologicalDF, aes(x=reorder(BiologicalDF$Goterm , BiologicalDF$Frequences), y=BiologicalDF$Frequences)) +
-    geom_bar(stat="identity",fill="darkred") + xlab("Biological GO Info") + ylab("Protein count")+
+    geom_bar(stat="identity",fill="darkred") + xlab("Biological Process") + ylab("Protein count")+
     theme_bw()+theme(text = element_text(size=12, face="bold", colour="black"),axis.text.x = element_text(vjust=2))
   BiologicalPlot <- BiologicalPlot + coord_flip()
+  
+  
+  
   #Get molecuar function
   MolecularDF <- Goparse(GOObj , 4)
-  #Plot top 5
+  #Plot top 10
   MolecularDF <- MolecularDF[1:10,]
-  rownames(MolecularDF) <- c()
+  MolecularDF <- na.omit(MolecularDF)
+  
   MolecularPlot <- ggplot(data=MolecularDF, aes(x=reorder(MolecularDF$Goterm , MolecularDF$Frequences), y=MolecularDF$Frequences)) +
-    geom_bar(stat="identity",fill="darkgreen") + xlab("Molecular GO Info") + ylab("Protein count")+
+    geom_bar(stat="identity",fill="darkgreen") + xlab("Molecular Function") + ylab("Protein count")+
     theme_bw()+theme(text = element_text(size=12, face="bold", colour="black"),axis.text.x = element_text(vjust=2))
   MolecularPlot <- MolecularPlot + coord_flip()
 
   #Get cellular component
   CellularDF <- Goparse(GOObj , 5)
-  #Plot top 5
+  #Plot top 10
   CellularDF <- CellularDF[1:10,]
-  rownames(CellularDF) <- c()
+  CellularDF <- na.omit(CellularDF)
+  
   CellularPlot <- ggplot(data=CellularDF, aes(x=reorder(CellularDF$Goterm , CellularDF$Frequences), y=CellularDF$Frequences)) +
-    geom_bar(stat="identity",fill="darkblue") + xlab("Cellular GO Info") + ylab("Protein count")+
+    geom_bar(stat="identity",fill="darkblue") + xlab("Cellular component") + ylab("Protein count")+
     theme_bw()+theme(text = element_text(size=12, face="bold", colour="black"),axis.text.x = element_text(vjust=2))
   CellularPlot <- CellularPlot + coord_flip()
 
@@ -107,8 +113,9 @@ PlotGoInfo <- function(GOObj , directorypath = NULL)
 
   GoInfoPlot <- ggarrange(Goplots , GoSummary , ncol = 2 ,  align = "h")
   if (!is.null(directorypath)){
-    ggsave(plot = GoInfoPlot , filename = paste0(directorypath ,"//" ,"GoPlotInfo.jpeg") , device = "jpeg" , dpi = 320 , width = 16 , height = 10)
-    ggsave(plot = GoInfoPlot , filename = paste0(directorypath ,"//" ,"GoPlotInfo.tiff") , device = "tiff" , dpi = 320 , width = 16 , height = 10)
+    ggsave(plot = GoInfoPlot , filename = paste0(directorypath ,"//" ,"GoPlotInfo.jpeg") , dpi = 320 , width = 19 , height = 10)
+    ggsave(plot = GoInfoPlot , filename = paste0(directorypath ,"//" ,"GoPlotInfo.tiff") , dpi = 320 , width = 19 , height = 10)
 
   }
+  plot(GoInfoPlot)
 }
