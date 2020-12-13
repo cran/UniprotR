@@ -31,7 +31,7 @@ GetSeqLength <- function(ProteinAccList , directorypath = NULL)
     RequestURL <- paste0(BaseUrl , Accession ,"&format=tab&force=true&columns=length")
     Request <- tryCatch(
       {
-        GET(RequestURL, timeout(7))
+        GET(RequestURL)
       },error = function(cond)
       {
         message("Internet connection problem occurs and the function will return the original error")

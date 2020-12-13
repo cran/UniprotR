@@ -35,7 +35,7 @@ GetPublication <- function(ProteinAccList, directorypath = NULL)
     #to see if Request == 200 or not
     Request <- tryCatch(
       {
-        GET(paste0(baseUrl , ProteinAcc,".xml") , timeout(5))
+        GET(paste0(baseUrl , ProteinAcc,".xml"))
       },error = function(cond)
       {
         message("Internet connection problem occurs and the function will return the original error")

@@ -10,7 +10,7 @@ citEntry(
   year = "2020",
   issn = "1874-3919",
   doi = "10.1016/j.jprot.2019.103613",
-  url = "http://www.sciencedirect.com/science/article/pii/S1874391919303859",
+  url = "https://www.sciencedirect.com/science/article/pii/S1874391919303859",
   textVersion = paste("Soudy, M., Anwar, A.M., Ahmed, E.A., Osama, A., Ezzeldin, S., Mahgoub, S. and Magdeldin, S., 2020. UniprotR: Retrieving and visualizing protein sequence and functional information from Universal Protein Resource (UniProt knowledgebase). Journal of Proteomics, 213, p.103613."
 )
 )

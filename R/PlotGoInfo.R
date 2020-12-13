@@ -16,7 +16,7 @@ Goparse <- function(GOObj , index = 3)
 {
   GO_df_obj_bio <- toString(na.omit(GOObj[,index]))
 
-  GO_df_obj_bio <- strsplit(GO_df_obj_bio,";|,")
+  GO_df_obj_bio <- strsplit(GO_df_obj_bio,";")
 
   GO_df_obj_bio_df <- data.frame(GO_df_obj_bio)
 
@@ -40,7 +40,7 @@ Goparse <- function(GOObj , index = 3)
   colnames(occurences) <- c("Goterm","Frequences")
 
   occurences %>%
-    mutate(freq = percent(occurences$Freq / length(rownames(GOObj)))) -> occurences
+    mutate(PecentageFromTotalProteins = percent(occurences$Freq / length(rownames(GOObj)))) -> occurences
   return(occurences)
 }
 
@@ -50,7 +50,7 @@ Goparse <- function(GOObj , index = 3)
 #'
 #' @usage PlotGoInfo(GOObj , directorypath = NULL)
 #'
-#' @param GOObj Dataframe.
+#' @param GOObj Dataframe retrieved from UniprotR Function "GetProteinGOInfo".
 #'
 #' @param directorypath path to save excel file containig results returened by the function ( default = NA ).
 #'
