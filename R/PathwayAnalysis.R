@@ -2,7 +2,7 @@
 #'
 #' This function is used for Enrichment analysis of given list of genes or proteins 
 #'
-#' @usage Enrichment.gprofiler(Accs, sources, OS = "hsapiens", p_value = 0.05, directorypath = NULL)
+#' @usage Enrichment.gprofiler(Accs, sources=NULL, OS="hsapiens", p_value=0.05, directorypath=NULL)
 #'
 #' @param Accs Vector of UniProt Accession/s or genes 
 #' 
@@ -10,24 +10,17 @@
 #' 
 #' @param OS  organism name Example: human - 'hsapiens', mouse - 'mmusculus'
 #' 
-#' @param p_value 	custom p-value threshold for significance, default = 0.05
-#'
-#' @param directorypath path to save excel file and plot returened by the function.
+#' @param p_value custom p-value threshold for significance, default = 0.05
 #'
 #' @export
 #'
 #' @author Mohmed Soudy \email{Mohamed.soudy@57357.com} and Ali Mostafa \email{ali.mo.anwar@std.agr.cu.edu.eg}
-Enrichment.gprofiler <- function(Accs, sources, OS = "hsapiens", p_value = 0.05, directorypath = NULL)
+Enrichment.gprofiler <- function(Accs, sources = NULL, OS = "hsapiens", p_value = 0.05)
 {
-  AccList <- as.character(unique(AccList))
-  Enrich.object <- gost(query = AccList, sources = sources, organism = OS, user_threshold = p_value)
+  AccList <- as.character(unique(Accs))
+  Enrich.object <- gost(query = Accs, sources = sources, organism = OS, user_threshold = p_value)
   
-  Enrich.plot <- gostplot(Enrich.object, capped = TRUE, interactive = T)
-  Enrich.plot
-  if(!is.null(directorypath))
-  {
-    saveWidget(Enrich.plot, file = paste0(directorypath, "/Enrichment analysis.html"))
-  }
+  gostplot(Enrich.object, capped = TRUE, interactive = T)
 }
 #' Connect and parse UniProt information
 #'
@@ -59,9 +52,9 @@ Enrichment.React <- function(AccList, organism = "human", pvalueCutoff = 0.05, d
   TopPathways <- TopPathways[1:10,]
   
   
-  p <- ggplot(TopPathways, aes(y= reorder(TopPathways$Description , TopPathways$Count), x= TopPathways$Count , fill = TopPathways$p.adjust)) +
-    geom_bar(stat="identity") + theme_classic()  + ylab("Description") 
-  p
+  p <- ggplot(TopPathways, aes(y= reorder(TopPathways$Description , TopPathways$Count), x= TopPathways$Count , fill = `p.adjust`)) +
+    geom_bar(stat="identity") + theme_classic()  + ylab("Description") + xlab("Count") 
+  plot(p)
   if(!is.null(directorypath))
   {
     ggsave(plot = p, filename = paste0(directorypath,"/Top 10 pathways.jpeg"), device = "jpeg", width = 8, height = 6, dpi = 300)

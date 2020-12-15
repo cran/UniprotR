@@ -31,7 +31,7 @@ Plot.GOMolecular <- function(GOObj, Top = 10, directorypath = NULL)
   {
     ggsave(plot = MolecularPlot, filename = paste0(directorypath, "/", "Molecular function.jpeg"), device = "jpeg", width = 7, height = 7)
   }
-  MolecularPlot
+  plot(MolecularPlot)
   return(MolecularPlot)
 }
 
@@ -68,7 +68,7 @@ PlotGOBiological <- function(GOObj, Top = 10, directorypath = NULL)
   {
     ggsave(plot = BiologicalPlot, filename = paste0(directorypath, "/", "Biological process.jpeg"), device = "jpeg", width = 7, height = 7)
   }
-  BiologicalPlot
+  plot(BiologicalPlot)
   return(BiologicalPlot)
 }
 
@@ -105,6 +105,6 @@ Plot.GOSubCellular <- function(GOObj, Top = 10, directorypath = NULL)
   {
     ggsave(plot = CellularPlot, filename = paste0(directorypath, "/", "Subcellular localization.jpeg"), device = "jpeg", width = 7, height = 7)
   }
-  CellularPlot
+  plot(CellularPlot)
   return(CellularPlot)
 }

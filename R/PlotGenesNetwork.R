@@ -29,10 +29,9 @@ PlotGenesNetwork <- function(ProteinDataObject, directorypath = NULL)
   #plot with networkD3
   useRtreeList <- ToListExplicit(ChromoTree, unname = TRUE)
   Net <- radialNetwork(useRtreeList)
-  Net
   if(!is.null(directorypath))
   {
     saveWidget(Net, file = paste0(directorypath,"/", "Protein clustering.html"))
   }
-  
+  return(Net)
 }

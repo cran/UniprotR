@@ -27,7 +27,7 @@ PlotAcidity <- function(SeqDataObjPath, directorypath = NULL)
     geom_violin(alpha = 0.3)+ geom_boxplot(width=0.1) +
     guides(fill=guide_legend(title="Groups"))+ xlab("Groups") + ylab("Hydrophobicity")+
     theme_bw() + ggtitle("Hydrophobicity") + theme(plot.title = element_text(hjust = 0.5))
-  p 
+  plot(p)
   if (!is.null(directorypath))
   {
     ggsave(plot = p , filename = paste0(directorypath ,"//" ,"Sequences acidity.jpeg") , dpi = 320 , width = 11 , height = 10)

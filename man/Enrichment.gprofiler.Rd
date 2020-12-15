@@ -4,7 +4,7 @@
 \alias{Enrichment.gprofiler}
 \title{Connect and parse UniProt information}
 \usage{
-Enrichment.gprofiler(Accs, sources, OS = "hsapiens", p_value = 0.05, directorypath = NULL)
+Enrichment.gprofiler(Accs, sources=NULL, OS="hsapiens", p_value=0.05)
 }
 \arguments{
 \item{Accs}{Vector of UniProt Accession/s or genes}
@@ -15,7 +15,6 @@ Enrichment.gprofiler(Accs, sources, OS = "hsapiens", p_value = 0.05, directorypa
 
 \item{p_value}{custom p-value threshold for significance, default = 0.05}
 
-\item{directorypath}{path to save excel file and plot returened by the function.}
 }
 \description{
 This function is used for Enrichment analysis of given list of genes or proteins
