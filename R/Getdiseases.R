@@ -21,21 +21,13 @@ Get.diseases <- function(Pathology_object, directorypath = NULL)
     return(NULL)
   }
   Protein.disease <- NULL
-  #Get disease id 
-  for (i in 1:dim(Disease)[1])
-  {
-    Disease.List <- paste0(do.call('rbind' ,str_extract_all(Disease$Involvement.in.disease[i] ,"DISEASE:(.*?)]")), collapse = ";")
-    Protein.disease <- c(Protein.disease, Disease.List)
-  }
-  Protein.disease <- as.data.frame(Protein.disease, row.names = rownames(Disease))
-  Protein.disease$Protein.disease <- gsub("DISEASE: " , "" , Protein.disease$Protein.disease)
   
   Disease.count.list <- setNames(data.frame(unlist(str_extract_all(Disease$Involvement.in.disease ,"DISEASE:(.*?)]"))), "DISEASE")
   Disease.count <- setNames(data.frame(plyr::count(Disease.count.list , "DISEASE")), c("Disease", "Numberofproteins"))
   Disease.count$Disease <- gsub("DISEASE: " , "" , Disease.count$Disease)
   Disease.count <- Disease.count[order(Disease.count$Numberofproteins, decreasing = T),]
   #Get OMIM Ids
-  OMIMID <- do.call('rbind', strsplit(unlist(ex_between(Disease.count$Disease ,"[", "]")), ":"))[,2]
+  #OMIMID <- do.call('rbind', strsplit(unlist(ex_between(Disease.count$Disease ,"[", "]")), ":"))[,2]
   #Disease.count$OMIMID <- CreateOMIMlink(OMIMID)
   if(!is.null(directorypath))
   {
