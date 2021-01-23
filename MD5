@@ -1,4 +1,4 @@
-cc65fee1632043e1b57c86d72ad38196 *DESCRIPTION
+6b7c45674a1a23024e519958459af963 *DESCRIPTION
 9b7fb9fe666b5c89fcdd50351eaa277c *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
@@ -36,9 +36,9 @@ e11ef71828f0e8d68f521c2269e41572 *R/PlotCharge.R
 587a7e40cf113798bacacb99d40e021e *R/PlotChromosomeInfo.R
 0216f8eb5b5603a65d9b30b2b9040047 *R/PlotGenesNetwork.R
 cbfc8487154d11655d3e07c2e56fa876 *R/PlotGoInfo.R
-d80e4b41cbd55803b782e14130e37dd5 *R/PlotGoterms.R
+c118749799ba8aa1be774380521269a5 *R/PlotGoterms.R
 7e6d8f9545a3c5df489d80aa8b59cf5b *R/PlotGravy.R
-d17b2fa7a72eb585d94920e056afa5fb *R/PlotPhyscochemical.R
+ccb1995c0ca598395257c6a67ea0a9c1 *R/PlotPhyscochemical.R
 7a1a1f7f1e09acccd0c9b35d513a225d *R/PlotProteinTaxa.R
 da632870121258ef0373fac1c030395b *R/PlotproteinExist.R
 fb71708d75d0977d66b5174b4ab091cc *R/PlotproteinScore.R

@@ -22,7 +22,7 @@ Plot.GOMolecular <- function(GOObj, Top = 10, directorypath = NULL)
   MolecularDF <- MolecularDF[1:Top, ]
   MolecularDF <- na.omit(MolecularDF)
   MolecularPlot <- ggplot(data = MolecularDF, aes(x = reorder(MolecularDF$Goterm, 
-                                                              MolecularDF$Frequences), y = MolecularDF$Frequences)) + 
+                                                              MolecularDF$Count), y = MolecularDF$Count)) + 
     geom_bar(stat = "identity", fill = "darkgreen") + xlab("Molecular Function") + 
     ylab("Protein count") + theme_bw() + theme(text = element_text(size = 12, 
                                                                    face = "bold", colour = "black"), 
@@ -59,7 +59,7 @@ PlotGOBiological <- function(GOObj, Top = 10, directorypath = NULL)
   BiologicalDF <- BiologicalDF[1:Top, ]
   BiologicalDF <- na.omit(BiologicalDF)
   BiologicalPlot <- ggplot(data = BiologicalDF, aes(x = reorder(BiologicalDF$Goterm, 
-                                                                BiologicalDF$Frequences), y = BiologicalDF$Frequences)) + 
+                                                                BiologicalDF$Count), y = BiologicalDF$Count)) + 
     geom_bar(stat = "identity", fill = "darkred") + xlab("Biological Process") + 
     ylab("Protein count") + theme_bw() + theme(text = element_text(size = 12, 
                                                                    face = "bold", colour = "black"),
@@ -96,7 +96,7 @@ Plot.GOSubCellular <- function(GOObj, Top = 10, directorypath = NULL)
   CellularDF <- CellularDF[1:Top, ]
   CellularDF <- na.omit(CellularDF)
   CellularPlot <- ggplot(data = CellularDF, aes(x = reorder(CellularDF$Goterm, 
-                                                            CellularDF$Frequences), y = CellularDF$Frequences)) + 
+                                                            CellularDF$Count), y = CellularDF$Count)) + 
     geom_bar(stat = "identity", fill = "darkblue") + xlab("Cellular component") + 
     ylab("Protein count") + theme_bw() + theme(text = element_text(size = 12, 
                                                                    face = "bold", colour = "black"),
