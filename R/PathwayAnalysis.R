@@ -48,15 +48,16 @@ Pathway.Enr <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
     }
   }
+  return(Enr.plot)
 }
 #' Connect and parse UniProt information
 #'
@@ -108,15 +109,16 @@ Enrichment.KEGG <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
     }
   }
+  return(Enr.plot)
 }
 #' Connect and parse UniProt information
 #'
@@ -168,15 +170,16 @@ Enrichment.REAC <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, path = directorypath , device = "jpeg", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
     }
   }
+  return(Enr.plot)
 }
 
 #' Connect and parse UniProt information
@@ -215,15 +218,16 @@ Enrichment.BP <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
     }
   }
+  return(Enr.plot)
 }
 
 #' Connect and parse UniProt information
@@ -262,15 +266,16 @@ Enrichment.MF <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
     }
   }
+  return(Enr.plot)
 }
 
 #' Connect and parse UniProt information
@@ -309,13 +314,14 @@ Enrichment.CC <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
     }
   }
+  return(Enr.plot)
 }

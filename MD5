@@ -1,4 +1,4 @@
-6b7c45674a1a23024e519958459af963 *DESCRIPTION
+6da2df49b19814ddaa05c46b960f2590 *DESCRIPTION
 9b7fb9fe666b5c89fcdd50351eaa277c *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
@@ -30,7 +30,7 @@ f5d51a4cc1c1fe81828fec573e8a935b *R/Getdiseases.R
 c59f2df4b2690db2407940561ad55014 *R/GetpdbStructure.R
 dc7e4a324fd48058e03f025804578d63 *R/GetproteinNetwork.R
 4a949e951b7b665b77a2b18595fac9df *R/HandleBadRequests.R
-4e735c3bc6d246260be315133bce51fc *R/PathwayAnalysis.R
+bf3ee29d97774b72eb2e74a484202891 *R/PathwayAnalysis.R
 12818ee5e013d8ce859291d1654bf89b *R/PlotAcidity.R
 e11ef71828f0e8d68f521c2269e41572 *R/PlotCharge.R
 587a7e40cf113798bacacb99d40e021e *R/PlotChromosomeInfo.R
