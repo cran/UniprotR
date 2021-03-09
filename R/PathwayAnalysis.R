@@ -258,7 +258,7 @@ Enrichment.MF <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   
   Enr.plot <- ggplot(Enrich.Res, aes(x = -log10(Enrich.Res$p_value), y = reorder(Enrich.Res$term_name, -Enrich.Res$p_value))) +
     geom_bar(stat = "identity", fill = "darkred") +
-    theme_bw() + xlab("-log10 (p.adj)") + ylab("Biological process") +
+    theme_bw() + xlab("-log10 (p.adj)") + ylab("Molecular function") +
     theme(legend.position="right", text = element_text(face="bold"),
           axis.text = element_text(color = "black", face = "bold")) 
   plot(Enr.plot)
