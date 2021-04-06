@@ -34,7 +34,7 @@ Pathway.Enr <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   }
   
   Enr.plot <- ggplot(Enrich.Res, aes(x = Enrich.Res$intersection_size, y = reorder(Enrich.Res$term_name, Enrich.Res$intersection_size),
-                                       size = reorder(round(Enrich.Res$p_value, 4), -log10(Enrich.Res$p_value)), 
+                                       size = reorder(round(Enrich.Res$p_value, 3), -log10(Enrich.Res$p_value)), 
                                        color = Enrich.Res$source)) +
     geom_point() +
     theme_bw() + xlab("# of detected proteins") + ylab("Pathway") +
@@ -48,13 +48,13 @@ Pathway.Enr <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 7, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 7, height = 8 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 14 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 14 ,dpi = 300)
     }
   }
   return(Enr.plot)
@@ -95,7 +95,7 @@ Enrichment.KEGG <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   }
   
   Enr.plot <- ggplot(Enrich.Res, aes(x = Enrich.Res$intersection_size, y = reorder(Enrich.Res$term_name, Enrich.Res$intersection_size),
-                                     size = reorder(round(Enrich.Res$p_value, 4), -log10(Enrich.Res$p_value)), 
+                                     size = reorder(round(Enrich.Res$p_value, 3), -log10(Enrich.Res$p_value)), 
                                      color = Enrich.Res$p_value)) +
     geom_point() +
     theme_bw() + xlab("# of detected proteins") + ylab("Pathway") +
@@ -109,13 +109,13 @@ Enrichment.KEGG <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 13 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 13 ,dpi = 300)
     }
   }
   return(Enr.plot)
@@ -156,7 +156,7 @@ Enrichment.REAC <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   }
   
   Enr.plot <- ggplot(Enrich.Res, aes(x = Enrich.Res$intersection_size, y = reorder(Enrich.Res$term_name, Enrich.Res$intersection_size),
-                                     size = reorder(round(Enrich.Res$p_value, 4), -log10(Enrich.Res$p_value)), 
+                                     size = reorder(round(Enrich.Res$p_value, 3), -log10(Enrich.Res$p_value)), 
                                      color = Enrich.Res$p_value)) +
     geom_point() +
     theme_bw() + xlab("# of detected proteins") + ylab("Pathway") +
@@ -170,13 +170,13 @@ Enrichment.REAC <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, path = directorypath , device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, path = directorypath , device = "jpeg", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 13 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 13 ,dpi = 300)
     }
   }
   return(Enr.plot)
@@ -218,13 +218,13 @@ Enrichment.BP <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 13 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 13 ,dpi = 300)
     }
   }
   return(Enr.plot)
@@ -257,7 +257,7 @@ Enrichment.MF <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   
   
   Enr.plot <- ggplot(Enrich.Res, aes(x = -log10(Enrich.Res$p_value), y = reorder(Enrich.Res$term_name, -Enrich.Res$p_value))) +
-    geom_bar(stat = "identity", fill = "darkred") +
+    geom_bar(stat = "identity", fill = "darkgreen") +
     theme_bw() + xlab("-log10 (p.adj)") + ylab("Molecular function") +
     theme(legend.position="right", text = element_text(face="bold"),
           axis.text = element_text(color = "black", face = "bold")) 
@@ -266,13 +266,13 @@ Enrichment.MF <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment MF.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment MF.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment MF.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 13 ,dpi = 300)
+      ggsave(filename = "Enrichment MF.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 13 ,dpi = 300)
     }
   }
   return(Enr.plot)
@@ -305,7 +305,7 @@ Enrichment.CC <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   
   
   Enr.plot <- ggplot(Enrich.Res, aes(x = -log10(Enrich.Res$p_value), y = reorder(Enrich.Res$term_name, -Enrich.Res$p_value))) +
-    geom_bar(stat = "identity", fill = "darkred") +
+    geom_bar(stat = "identity", fill = "darkblue") +
     theme_bw() + xlab("-log10 (p.adj)") + ylab("Cellular component") +
     theme(legend.position="right", text = element_text(face="bold"),
           axis.text = element_text(color = "black", face = "bold")) 
@@ -314,13 +314,13 @@ Enrichment.CC <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 10, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 10, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
-      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 11 ,dpi = 300)
-      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 11 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 15, height = 13 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 13 ,dpi = 300)
     }
   }
   return(Enr.plot)

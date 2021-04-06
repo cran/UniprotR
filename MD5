@@ -1,4 +1,4 @@
-a35d7c51ec80ce18fc7f2201f36139db *DESCRIPTION
+06363f359e486a5a4539c9d23f1fd351 *DESCRIPTION
 94665dc33c56d3fd0da90e2a4c7fe768 *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
@@ -31,13 +31,13 @@ f5d51a4cc1c1fe81828fec573e8a935b *R/Getdiseases.R
 c59f2df4b2690db2407940561ad55014 *R/GetpdbStructure.R
 dc7e4a324fd48058e03f025804578d63 *R/GetproteinNetwork.R
 4a949e951b7b665b77a2b18595fac9df *R/HandleBadRequests.R
-d3ea414ca8cc76ee6c043f0befcb563c *R/PathwayAnalysis.R
+278ab46f500a2c2a57c322eb809d313e *R/PathwayAnalysis.R
 12818ee5e013d8ce859291d1654bf89b *R/PlotAcidity.R
 e11ef71828f0e8d68f521c2269e41572 *R/PlotCharge.R
 587a7e40cf113798bacacb99d40e021e *R/PlotChromosomeInfo.R
 0216f8eb5b5603a65d9b30b2b9040047 *R/PlotGenesNetwork.R
-cbfc8487154d11655d3e07c2e56fa876 *R/PlotGoInfo.R
-c118749799ba8aa1be774380521269a5 *R/PlotGoterms.R
+7131fc638fd180c384f03b549f9b5f88 *R/PlotGoInfo.R
+340304724163f75f67c0c4f72301c27a *R/PlotGoterms.R
 7e6d8f9545a3c5df489d80aa8b59cf5b *R/PlotGravy.R
 ccb1995c0ca598395257c6a67ea0a9c1 *R/PlotPhyscochemical.R
 7a1a1f7f1e09acccd0c9b35d513a225d *R/PlotProteinTaxa.R
@@ -93,7 +93,8 @@ dde2dca18e66debe6dc3850e5827c246 *man/PlotCharge.Rd
 23cfd2fdebb089f9895d367e44a08d34 *man/PlotChromosomeInfo.Rd
 812a76a18265ab3a7792c0d3247f3416 *man/PlotGOBiological.Rd
 fe75a51417f147305218683d91df7bd2 *man/PlotGenesNetwork.Rd
-f07584ef3c210070ed87d943e7ed2f31 *man/PlotGoInfo.Rd
+ad2caa04a6a730a8f9f2ae6574f65b78 *man/PlotGoInfo.Rd
+2ac604ee03deb5b67389c75c8a05620e *man/PlotGoterms.Rd
 2b40163151aaaa2812578ef8eb3d063c *man/PlotGravy.Rd
 2a055de9318ae0312b6fab5ea8bf2ea4 *man/PlotPhysicochemical.Rd
 db0a2073d952411d863c6f9fa298bbbe *man/PlotProteinGO_bio.Rd
