@@ -48,8 +48,8 @@ Pathway.Enr <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 7, height = 8 ,dpi = 300)
-      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 7, height = 8 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 8.5, height = 10 ,dpi = 300)
+      ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 8.5, height = 10 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
@@ -109,8 +109,8 @@ Enrichment.KEGG <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 6, height = 7 ,dpi = 300)
-      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 7, height = 9 ,dpi = 300)
+      ggsave(filename = "Enrichment KEGG.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 7, height = 9 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
@@ -170,8 +170,8 @@ Enrichment.REAC <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, path = directorypath , device = "jpeg", width = 6, height = 7 ,dpi = 300)
-      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.jpeg", plot = Enr.plot, path = directorypath , device = "jpeg", width = 8.5, height = 10 ,dpi = 300)
+      ggsave(filename = "Enrichment REAC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 8.5, height = 10 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
@@ -218,8 +218,8 @@ Enrichment.BP <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 6, height = 7 ,dpi = 300)
-      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 7, height = 6 ,dpi = 300)
+      ggsave(filename = "Enrichment BP.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 7, height = 6 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
@@ -266,8 +266,8 @@ Enrichment.MF <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment MF.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 6, height = 7 ,dpi = 300)
-      ggsave(filename = "Enrichment MF.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment MF.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 7, height = 6 ,dpi = 300)
+      ggsave(filename = "Enrichment MF.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 7, height = 6 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
@@ -314,8 +314,8 @@ Enrichment.CC <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL)
   {
     if (dim(Enrich.Res)[1] < 50)
     {
-      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 6, height = 7 ,dpi = 300)
-      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 6, height = 7 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.jpeg", plot = Enr.plot, path = directorypath, device = "jpeg", width = 7, height = 6 ,dpi = 300)
+      ggsave(filename = "Enrichment CC.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 7, height = 6 ,dpi = 300)
     }
     else if (dim(Enrich.Res)[1] < 100)
     {
