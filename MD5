@@ -1,10 +1,10 @@
-3d90473a9ad0afa274c886a5c6cd7961 *DESCRIPTION
-4984ea971bc56ad3aa9926a9d99f7deb *NAMESPACE
+f4bd9b606675ab6c44ac260a933781ca *DESCRIPTION
+e1fbf2a4012328196c881524948cba1f *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
 620e5e711470c0dc29ec4fc28d9de626 *R/ConvertID.R
-291aa6eef2b040354abb4ace787585fd *R/GETSeqFastaUniprot.R
-f3132be765683526dfddbfb4bffa8680 *R/GetAccessionList.R
+f1d1a1258db0ae022e0b5bdb14e6e056 *R/GETSeqFastaUniprot.R
+36c65541f33fe10b07fdfd98f2d0907c *R/GetAccessionList.R
 f2feefceaf050cf2f3dfa02cd4f90454 *R/GetCross_references_Information.R
 ebd62ab334cccd0eda49dcf52625bd4f *R/GetExpression.R
 e36d18aeadef3c3755419cf3ea86d5cf *R/GetFamily_Domains.R
@@ -36,6 +36,9 @@ dc7e4a324fd48058e03f025804578d63 *R/GetproteinNetwork.R
 12818ee5e013d8ce859291d1654bf89b *R/PlotAcidity.R
 e11ef71828f0e8d68f521c2269e41572 *R/PlotCharge.R
 587a7e40cf113798bacacb99d40e021e *R/PlotChromosomeInfo.R
+383ae74984357b7e19aec1615d5c133b *R/PlotEnrichedGO.R
+6223d7e0eab92785c09757b0d0942b5d *R/PlotEnrichedPathways.R
+cc1028fec6be3684c84de86033637ded *R/PlotGOAll.R
 0216f8eb5b5603a65d9b30b2b9040047 *R/PlotGenesNetwork.R
 7131fc638fd180c384f03b549f9b5f88 *R/PlotGoInfo.R
 340304724163f75f67c0c4f72301c27a *R/PlotGoterms.R
@@ -57,7 +60,7 @@ c4db4122f0e38f077833b4b039a1531c *man/Enrichment.BP.Rd
 80fb2bdcf6b75574055bed5c499eb074 *man/Enrichment.KEGG.Rd
 74eed05e65284e08fa512091ecac1378 *man/Enrichment.MF.Rd
 a71d416080895a911fc7c916626f4542 *man/Enrichment.REAC.Rd
-5922a25ae9815f2e52b880fb658e7157 *man/GETSeqFastaUniprot.Rd
+3e608d08929798de522278997cb58b66 *man/GETSeqFastaUniprot.Rd
 5bf604485cc6e9e4303215329921a50d *man/Get.diseases.Rd
 aa02b95a2989488ad3334d1df6fbb8a3 *man/GetAccessionList.Rd
 04bf6bc00bf30384f0ad378923366f10 *man/GetCross_references_Information.Rd
@@ -93,6 +96,9 @@ deee9c14007499710c0dceecf8ce5f87 *man/Plot.GOSubCellular.Rd
 afff1380d97c2c57cd2d7755e81e5194 *man/PlotAcidity.Rd
 dde2dca18e66debe6dc3850e5827c246 *man/PlotCharge.Rd
 23cfd2fdebb089f9895d367e44a08d34 *man/PlotChromosomeInfo.Rd
+94390d0cca9be8827246336450463cb1 *man/PlotEnrichedGO.Rd
+a05c6c32a258e0b286daebfd4fd0c6d1 *man/PlotEnrichedPathways.Rd
+cc74e0baa03fe50f6fa4970543f42c1b *man/PlotGOAll.Rd
 812a76a18265ab3a7792c0d3247f3416 *man/PlotGOBiological.Rd
 fe75a51417f147305218683d91df7bd2 *man/PlotGenesNetwork.Rd
 ad2caa04a6a730a8f9f2ae6574f65b78 *man/PlotGoInfo.Rd
