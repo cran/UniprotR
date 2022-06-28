@@ -1,4 +1,4 @@
-f4bd9b606675ab6c44ac260a933781ca *DESCRIPTION
+98046cbec10c9e5ed2395c43d20d65a0 *DESCRIPTION
 e1fbf2a4012328196c881524948cba1f *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
@@ -20,8 +20,8 @@ fb44531613c9922e0d17cec65730afaa *R/GetProteoAnnotator.R
 e1be2049e7cbceccb4ceb0099b7a939d *R/GetProteomeFasta.R
 540c1a7e04c2aaecd0790280434a9792 *R/GetProteomeInfo.R
 7ca3983b44a0c73c72b721f7ad2c6443 *R/GetPublication.R
-e22c3fe0ebad36f98c4e1b4b7b9a198d *R/GetSeqLength.R
-e7572105d23b524dc78db6c443764236 *R/GetSequenceIso.R
+5d2e811c9933df0e1c3520ca950d545e *R/GetSeqLength.R
+421cec9abdf0ebc8b483dc6e9e01512e *R/GetSequenceIso.R
 4d27542e9504270de0d5f2efd9afdaec *R/GetSequences.R
 51f1ad35cb7f4fd1441bd7f6a307efb5 *R/GetStructureInfo.R
 d8a5a54fb66e9734cd28e504a7c1d9c9 *R/GetSubcellular_location.R
