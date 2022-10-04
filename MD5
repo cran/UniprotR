@@ -1,9 +1,9 @@
-4e855fffd5c242dd58fa7638c3235db5 *DESCRIPTION
+ad64e848408d47a46b06773f4e072324 *DESCRIPTION
 7acd18608196a299f64214a5d3901270 *NAMESPACE
 07560a8cb170d059425f2698db169762 *R/ConstructGenesTree.R
 d62443b80a75853c884c9a08fbd0215d *R/ConstructLocTree.R
 620e5e711470c0dc29ec4fc28d9de626 *R/ConvertID.R
-f1d1a1258db0ae022e0b5bdb14e6e056 *R/GETSeqFastaUniprot.R
+a86ca1e6b5f694f74b6b7f58b074bbb9 *R/GETSeqFastaUniprot.R
 36c65541f33fe10b07fdfd98f2d0907c *R/GetAccessionList.R
 c6e957201a06766f855c862eab4d3914 *R/GetExpression.R
 08711d67cf8b500203b70a71789028ff *R/GetFamily_Domains.R
@@ -15,7 +15,7 @@ c692f7fd11a9e3ea47df0dae58a7f119 *R/GetGeneral_Information.R
 b87f86bcc3cc45669034df596732984d *R/GetProteinFunction.R
 3cf340bbb3faaea7e74afdb1f9435c1b *R/GetProteinGOInfo.R
 63b0b4ce90738297c6c397ef9e707055 *R/GetProteinInteractions.R
-fb44531613c9922e0d17cec65730afaa *R/GetProteoAnnotator.R
+aa30786e9f99bc9fdf0c336e7c94ea2a *R/GetProteoAnnotator.R
 830ace70a4219bfa6ac07b6d585936d2 *R/GetProteomeFasta.R
 316451068ed930ed946ded32b15302ae *R/GetProteomeInfo.R
 703d8f7c6d084943c0b3f7679d80609e *R/GetPublication.R
