@@ -21,11 +21,14 @@ Pathway.Enr <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL,top=1
 {
   
   AccList <- as.character(unique(Accs))
-  Enrich.object <- gost(query = Accs, sources = c('KEGG', 'REAC'), organism = OS, user_threshold = p_value, evcodes = T)
+  Enrich.object <- gost(query = Accs, sources = c('KEGG', 'REAC'), 
+                        organism = OS, user_threshold = p_value, evcodes = T)
   
   Enrich.Res <- Enrich.object$result
-  Enrich.Res[1:top,]
   Enrich.Res$source <- ifelse(Enrich.Res$source == "KEGG", "KEGG", "REACTOME")
+  
+  Enrich.Res_top <- Enrich.Res[1:top,]
+  Enrich.Res_top <- na.omit(Enrich.Res_top)
   # A function factory for getting integer y-axis values.
   integer_breaks <- function(n = 5, ...) {
     fxn <- function(x) {
@@ -36,15 +39,17 @@ Pathway.Enr <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL,top=1
     return(fxn)
   }
   
-  Enr.plot <- ggplot(Enrich.Res, aes(x = Enrich.Res$intersection_size, y = reorder(Enrich.Res$term_name, Enrich.Res$intersection_size),
-                                       size = reorder(round(Enrich.Res$p_value, 3), -log10(Enrich.Res$p_value)), 
-                                       color = Enrich.Res$source)) +
+  Enr.plot <- ggplot(Enrich.Res_top, aes(x = Enrich.Res_top$intersection_size,
+                                         y = reorder(Enrich.Res_top$term_name, Enrich.Res_top$intersection_size),
+                                       size = reorder(round(Enrich.Res_top$p_value, 3),
+                                                      -log10(Enrich.Res_top$p_value)), 
+                                       color = Enrich.Res_top$source)) +
     geom_point() +
     theme_bw() + xlab("# of detected proteins") + ylab("Pathway") +
     theme(legend.position="right", text = element_text(face="bold"),
           axis.text = element_text(color = "black", face = "bold")) +
     labs(size = "p.adj", color = "Database") +
-    scale_color_manual(values = c("#17202A", "#A93226")) +
+    scale_color_manual(values = c("darkblue", "#A93226")) +
    scale_x_continuous(breaks = integer_breaks())
   plot(Enr.plot)
   if (!is.null(directorypath))
@@ -60,7 +65,7 @@ Pathway.Enr <- function(Accs,OS="hsapiens",p_value=0.05,directorypath=NULL,top=1
       ggsave(filename = "Enrichment analysis.tiff", plot = Enr.plot, path = directorypath, device = "tiff", width = 15, height = 14 ,dpi = 300)
     }
   }
-  return(Enr.plot)
+  return(Enrich.Res)
 }
 #' Connect and parse UniProt information
 #'

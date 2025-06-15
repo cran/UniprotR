@@ -29,7 +29,7 @@ GetPTM_Processing<- function(ProteinAccList, directorypath = NULL ){
     message("Please connect to the internet as the package requires internect connection.")
     return()
   }
-
+  options(timeout=10000)
   message("Please wait we are processing your accessions ...")
   pb <- progress::progress_bar$new(total = length(ProteinAccList))
   # PTM_Processsing information to be collected

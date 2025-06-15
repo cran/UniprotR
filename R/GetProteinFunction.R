@@ -29,6 +29,7 @@ GetProteinFunction <- function(ProteinAccList , directorypath = NULL)
     message("Please connect to the internet as the package requires internect connection.")
     return()
   }
+  options(timeout=10000)
   ProteinInfoParsed_total = data.frame()
   baseUrl <- "https://rest.uniprot.org/uniprotkb/search?query=accession:"
   columns = "absorption,ft_act_site,cc_activity_regulation,ft_binding,cc_catalytic_activity,cc_cofactor,ft_dna_bind,ec,cc_function,kinetics,cc_pathway,ph_dependence,redox_potential,rhea,ft_site,temp_dependence"

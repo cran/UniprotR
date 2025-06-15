@@ -28,6 +28,7 @@ GetProteinInteractions <- function(ProteinAccList , directorypath = NULL)
     message("Please connect to the internet as the package requires internect connection.")
     return()
   }
+  options(timeout=10000)
   ProteinInfoParsed_total = data.frame()
   baseUrl <- "https://rest.uniprot.org/uniprotkb/search?query=accession:"
   columns = "cc_subunit, cc_interaction"
